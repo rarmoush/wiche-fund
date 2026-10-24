@@ -116,6 +116,8 @@
       }
       .stat-strip p:not(.num) { margin: 0.3rem 0 0.15rem; font-size: 0.875rem; line-height: 1.3; color: var(--muted); }
       .src { font-size: 0.75rem; }
+      .nowrap { white-space: nowrap; }
+      .stat-strip .src { display: inline-block; white-space: nowrap; line-height: 1.15; }
       .chart { margin: 1.35rem 0 0; }
       p.src { max-width: 62ch; margin: 0.45rem 0 0; }
       .chart figcaption { margin: 0 0 0.7rem; font-weight: 650; }
@@ -220,17 +222,17 @@
           <li>
             <p class="num">3,754</p>
             <p>New breast cancer cases in 2024</p>
-            <a class="src" href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2024.HTM" target="_blank" rel="noopener noreferrer">Ministry of Public Health registry<span class="sr-only">, 2024 table of cases in women, opens in a new tab</span></a>
+            <a class="src" href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2024.HTM" target="_blank" rel="noopener noreferrer">MoPH registry<span class="sr-only">, Ministry of Public Health, 2024 table of cases in women, opens in a new tab</span></a>
           </li>
           <li>
             <p class="num">2,252</p>
             <p>Cases in women in 2012, the earlier count</p>
-            <a class="src" href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2012.HTM" target="_blank" rel="noopener noreferrer">Ministry of Public Health registry<span class="sr-only">, 2012 table of cases in women, opens in a new tab</span></a>
+            <a class="src" href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2012.HTM" target="_blank" rel="noopener noreferrer">MoPH registry<span class="sr-only">, Ministry of Public Health, 2012 table of cases in women, opens in a new tab</span></a>
           </li>
           <li>
             <p class="num">38.7%</p>
             <p>Of new cancers in women</p>
-            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC GLOBOCAN 2024<span class="sr-only"> fact sheet (PDF), opens in a new tab</span></a>
+            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">GLOBOCAN 2024<span class="sr-only">, IARC fact sheet (PDF), opens in a new tab</span></a>
           </li>
         </ul>
         <figure class="chart">
@@ -340,7 +342,7 @@
             <span class="flow-num">2</span>
             <div>
               <p class="step-title">AUB holds it</p>
-              <p>A US 501(c)(3). The gift stays invested.</p>
+              <p>A US <span class="nowrap">501(c)(3)</span>. The gift stays invested.</p>
             </div>
           </li>
           <li>
@@ -362,7 +364,7 @@
         <div class="faq">
           <details>
             <summary>Is my gift tax-deductible?</summary>
-            <p>AUB is a 501(c)(3) organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
+            <p>AUB is a <span class="nowrap">501(c)(3)</span> organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
             <p>Non-US donors: this page makes no deductibility claim outside the US.</p>
           </details>
           <details>
@@ -391,7 +393,7 @@
           <summary>Other ways to give</summary>
           <p>Checks payable to AUB. Write the designation above on the memo line. Mail them to Office of Development, American University of Beirut, 3 Dag Hammarskjold Plaza, 8th Floor, New York, NY 10017.</p>
           <p>For stock, a donor-advised fund, or crypto, write to <a href="mailto:advancement@aub.edu.lb">advancement@aub.edu.lb</a>.</p>
-          <p>Employer match lookup is not on this page yet. If your employer matches gifts to a US 501(c)(3), give on AUB’s site and send them the receipt.</p>
+          <p>Employer match lookup is not on this page yet. If your employer matches gifts to a US <span class="nowrap">501(c)(3)</span>, give on AUB’s site and send them the receipt.</p>
         </details>
       </section>
 
@@ -410,7 +412,7 @@
         <p class="toast" id="share-toast" role="status" aria-live="polite"></p>
         <details id="ways" class="fold">
           <summary>Ask a friend</summary>
-          <p class="ask-preview" id="ask-preview">I'm asking friends to give to the WICHE Cancer Fund at AUBMC, for breast cancer care all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment. Gifts go to AUB's US 501(c)(3).</p>
+          <p class="ask-preview" id="ask-preview">I'm asking friends to give to the WICHE Cancer Fund at AUBMC, for breast cancer care all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment. Gifts go to AUB's US <span class="nowrap">501(c)(3)</span>.</p>
           <button type="button" class="btn btn-outline" id="ask-copy">Copy note</button>
           <p class="toast" id="ask-toast" role="status" aria-live="polite"></p>
         </details>
@@ -428,13 +430,13 @@
       <p class="note-hold">A note from the founder, Randa Armoush, is coming soon.</p>
       <ul class="fine">
         <li>WICHE Cancer Fund</li>
-        <li>American University of Beirut, US 501(c)(3)</li>
+        <li>American University of Beirut, US <span class="nowrap">501(c)(3)</span></li>
         <li class="ein-item"><span class="ein">EIN 13-5596846</span><span class="hint">Pending Advancement confirmation for receipts.</span></li>
         <li><a href="https://projects.propublica.org/nonprofits/organizations/135596846" target="_blank" rel="noopener noreferrer">Form 990<span class="sr-only"> on ProPublica, opens in a new tab</span></a></li>
         <li><a href="https://aub.edu.lb/advancement/Pages/ContributorsReport.aspx" target="_blank" rel="noopener noreferrer">Contributors reports<span class="sr-only">, opens in a new tab</span></a></li>
         <li><a href="mailto:advancement@aub.edu.lb">advancement@aub.edu.lb</a></li>
       </ul>
-      <p class="tax">AUB is a 501(c)(3) organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
+      <p class="tax">AUB is a <span class="nowrap">501(c)(3)</span> organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
       <p class="foot-note">Not the Cancer Support Fund or the Lebanese Breast Cancer Foundation. No logo, and no patient photos, until those are cleared.</p>
     </footer>
   </body>
