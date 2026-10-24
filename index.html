@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>WICHE Oncology Endowed Fund</title>
-    <meta name="description" content="Cancer care at AUBMC is priced in dollars. Since 2019 the Lebanese pound has lost 98 percent of its value. This endowment pays for treatment so a diagnosis is not the bill that stops care." />
+    <title>WICHE Cancer Fund</title>
+    <meta name="description" content="Breast cancer care at AUBMC, all year. In July 2026 the WICHE Cancer Fund helped three Lebanese women with breast cancer get treatment." />
     <meta name="theme-color" content="#441f41" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rarmoush.github.io/wiche-fund/" />
-    <meta property="og:title" content="WICHE Oncology Endowed Fund" />
-    <meta property="og:description" content="Cancer care at AUBMC is priced in dollars. Since 2019 the Lebanese pound has lost 98 percent of its value. This endowment pays for treatment so a diagnosis is not the bill that stops care." />
+    <meta property="og:title" content="WICHE Cancer Fund" />
+    <meta property="og:description" content="Breast cancer care at AUBMC, all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment." />
     <meta property="og:image" content="https://rarmoush.github.io/wiche-fund/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A geometric pink ribbon: Breast cancer is the most common cancer in Lebanon. WICHE Oncology Endowed Fund. No photographs of people." />
+    <meta property="og:image:alt" content="A geometric pink ribbon: Breast cancer care at AUBMC, all year. WICHE Cancer Fund. No photographs of people." />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="WICHE Oncology Endowed Fund" />
-    <meta name="twitter:description" content="Cancer care at AUBMC is priced in dollars. Since 2019 the Lebanese pound has lost 98 percent of its value. This endowment pays for treatment so a diagnosis is not the bill that stops care." />
+    <meta name="twitter:title" content="WICHE Cancer Fund" />
+    <meta name="twitter:description" content="Breast cancer care at AUBMC, all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment." />
     <meta name="twitter:image" content="https://rarmoush.github.io/wiche-fund/og-image.png" />
     <style>
       :root {
@@ -89,11 +89,11 @@
         letter-spacing: 0.08em; text-transform: uppercase; color: var(--plum);
       }
       h1 {
-        margin: 0; max-width: 16ch; font-family: var(--serif);
+        margin: 0; max-width: 14ch; font-family: var(--serif);
         font-size: clamp(2.35rem, 7vw, 4rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.03em;
       }
-      h1 em { font-style: italic; font-weight: 500; }
-      .subhead { max-width: 36ch; margin: 1rem 0 0; font-size: 1.125rem; line-height: 1.4; }
+      .subhead { max-width: 28ch; margin: 0.85rem 0 0; font-size: 1.125rem; line-height: 1.4; }
+      .proof { max-width: 36ch; margin: 0.85rem 0 0; }
       .hero-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.5rem; }
       main section { padding-block: 2.5rem; }
       main section + section { border-top: 1px solid var(--line); }
@@ -101,18 +101,23 @@
         margin: 0 0 0.55rem; font-family: var(--serif);
         font-size: clamp(1.7rem, 4vw, 2.25rem); font-weight: 500; line-height: 1.15;
       }
+      h3 {
+        margin: 1.5rem 0 0.75rem; font-family: var(--serif);
+        font-size: 1.35rem; font-weight: 500; line-height: 1.2;
+      }
       .lede { max-width: 62ch; margin: 0 0 1.25rem; }
       .stat-strip {
         display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem 0.9rem;
         list-style: none; margin: 0 0 1.5rem; padding: 0;
       }
       .stat-strip .num {
-        margin: 0; font-family: var(--serif); font-size: clamp(1.7rem, 4vw, 2.2rem);
+        margin: 0; font-family: var(--serif); font-size: clamp(2.5rem, 7vw, 3.25rem);
         font-weight: 500; line-height: 1; letter-spacing: -0.03em; color: var(--plum);
       }
       .stat-strip p:not(.num) { margin: 0.3rem 0 0.15rem; font-size: 0.875rem; line-height: 1.3; color: var(--muted); }
       .src { font-size: 0.75rem; }
-      .chart { margin: 0; }
+      .chart { margin: 1.35rem 0 0; }
+      p.src { max-width: 62ch; margin: 0.45rem 0 0; }
       .chart figcaption { margin: 0 0 0.7rem; font-weight: 650; }
       .chart ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.65rem; }
       .bar-meta { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.2rem; font-size: 0.875rem; }
@@ -141,35 +146,9 @@
       .flow-steps .cite { display: inline-block; margin-top: 0.2rem; }
       .faq details { border-top: 1px solid var(--line); }
       .faq details:last-child { border-bottom: 1px solid var(--line); }
-      .segment { border: 0; margin: 0 0 0.9rem; padding: 0; }
-      .segment-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
-      .segment-opt, .chip { position: relative; }
-      .segment-opt span, .chip span {
-        display: flex; align-items: center; justify-content: center; min-height: 48px;
-        border: 2px solid var(--line); font-weight: 650; cursor: pointer;
-      }
-      .segment-opt span { border-radius: 999px; }
-      .chip span { border-radius: 12px; background: var(--cream); }
-      .segment-opt input, .chip input { position: absolute; opacity: 0; pointer-events: none; }
-      .segment-opt input:checked + span, .chip input:checked + span {
-        background: var(--plum); border-color: var(--plum); color: var(--cream);
-      }
-      .segment-opt input:focus-visible + span, .chip input:focus-visible + span {
-        outline: 2px solid var(--plum); outline-offset: 3px;
-      }
-      .chip-label {
-        margin: 0 0 0.4rem; font-size: 0.75rem; font-weight: 700;
-        letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
-      }
-      .chip-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.45rem; }
-      .chips { margin-bottom: 0.85rem; }
-      .other-wrap { margin-top: 0.7rem; }
-      .other-wrap label { display: block; margin-bottom: 0.25rem; font-size: 0.875rem; }
-      input[type="number"] {
-        width: 100%; min-height: 48px; padding: 0.45rem 0.7rem;
-        border: 2px solid var(--line); border-radius: 12px; background: var(--cream); color: var(--ink); font: inherit;
-      }
-      .give-hint { margin: 0.65rem 0 0; color: var(--muted); }
+      .give-actions { margin-top: 0; }
+      .give-hint { margin: 0.85rem 0 0; color: var(--muted); }
+      .dedicate { max-width: 42ch; margin: 0.85rem 0 0; }
       .share-primary { display: flex; flex-wrap: wrap; gap: 0.55rem; }
       .share-more {
         display: flex; flex-wrap: wrap; gap: 0.15rem 0.85rem;
@@ -195,7 +174,7 @@
       .hint { display: block; margin-top: 0.1rem; font-size: 0.8125rem; color: var(--muted); font-weight: 400; }
       .tax, .foot-note { max-width: 62ch; margin: 0.7rem 0 0; font-size: 0.9375rem; color: var(--muted); }
       @media (min-width: 700px) {
-        .stat-strip { grid-template-columns: repeat(4, 1fr); }
+        .stat-strip { grid-template-columns: repeat(3, 1fr); }
       }
       @media print {
         .skip, #share { display: none !important; }
@@ -220,12 +199,13 @@
           <svg class="ribbon" viewBox="0 0 100 140" aria-hidden="true" focusable="false">
             <use href="#ribbon-mark"></use>
           </svg>
-          <span>WICHE Oncology Endowed Fund</span>
+          <span>WICHE Cancer Fund</span>
         </p>
-        <h1>Cancer care at AUBMC is priced in <em>dollars</em>.</h1>
-        <p class="subhead">The pound has lost 98% of its value since 2019. This fund pays for treatment.</p>
+        <h1>So treatment can continue.</h1>
+        <p class="subhead">Breast cancer care at AUBMC, all year.</p>
+        <p class="proof">In July 2026 the fund helped three Lebanese women with breast cancer get treatment.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give<span class="sr-only"> to AUB. Designation: WICHE Oncology Endowed Fund. Opens in a new tab.</span></a>
+          <a class="btn btn-primary" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give<span class="sr-only">. Opens in a new tab.</span></a>
           <a class="btn btn-outline" href="#how">See where it goes</a>
         </div>
       </div>
@@ -234,65 +214,113 @@
     <main id="main">
       <section id="lebanon" class="wrap" aria-labelledby="lebanon-title">
         <!-- PENDING: diagnosis categories for the 9 non-breast-cancer patients not yet supplied by AUBMC. Do not infer. -->
-        <h2 id="lebanon-title">Cancer in Lebanon</h2>
-        <p class="lede">Breast cancer is the most common cancer here. These counts are from IARC, 2024.</p>
+        <!-- [NEED: source] National Cancer Registry breast-cancer counts for 2013, 2014, 2017, and 2020 were not read from the primary tables. Do not fill those years in. -->
+        <h2 id="lebanon-title">Breast cancer in Lebanon</h2>
         <ul class="stat-strip">
           <li>
-            <p class="num">3,404</p>
-            <p>New breast cancer cases</p>
-            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC<span class="sr-only"> GLOBOCAN 2024 fact sheet (PDF), opens in a new tab</span></a>
+            <p class="num">3,754</p>
+            <p>New breast cancer cases in 2024</p>
+            <a class="src" href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2024.HTM" target="_blank" rel="noopener noreferrer">Ministry of Public Health registry<span class="sr-only">, 2024 table of cases in women, opens in a new tab</span></a>
           </li>
           <li>
-            <p class="num">19.2%</p>
-            <p>Of all new cancers</p>
-            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC<span class="sr-only"> GLOBOCAN 2024 fact sheet (PDF), opens in a new tab</span></a>
+            <p class="num">2,252</p>
+            <p>Cases in women in 2012, the earlier count</p>
+            <a class="src" href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2012.HTM" target="_blank" rel="noopener noreferrer">Ministry of Public Health registry<span class="sr-only">, 2012 table of cases in women, opens in a new tab</span></a>
           </li>
           <li>
             <p class="num">38.7%</p>
             <p>Of new cancers in women</p>
-            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC<span class="sr-only"> GLOBOCAN 2024 fact sheet (PDF), opens in a new tab</span></a>
-          </li>
-          <li>
-            <p class="num">17,728</p>
-            <p>All new cancers</p>
-            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC<span class="sr-only"> GLOBOCAN 2024 fact sheet (PDF), opens in a new tab</span></a>
+            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC GLOBOCAN 2024<span class="sr-only"> fact sheet (PDF), opens in a new tab</span></a>
           </li>
         </ul>
         <figure class="chart">
-          <figcaption>Most common cancers, 2024</figcaption>
+          <figcaption>Cases in women, national registry</figcaption>
           <ol>
             <li>
-              <div class="bar-meta"><span>Breast</span><span>3,404 · 19.2%</span></div>
-              <div class="bar" role="img" aria-label="Breast, 3,404 cases"><span class="bar-fill is-breast" style="width:100%"></span></div>
+              <div class="bar-meta"><span>2012</span><span>2,252</span></div>
+              <div class="bar" role="img" aria-label="2012, 2,252 cases in women"><span class="bar-fill is-breast" style="width:59.8%"></span></div>
             </li>
             <li>
-              <div class="bar-meta"><span>Lung</span><span>1,820 · 10.3%</span></div>
-              <div class="bar" role="img" aria-label="Lung, 1,820 cases"><span class="bar-fill" style="width:53.47%"></span></div>
+              <div class="bar-meta"><span>2015</span><span>2,547</span></div>
+              <div class="bar" role="img" aria-label="2015, 2,547 cases in women"><span class="bar-fill is-breast" style="width:67.6%"></span></div>
             </li>
             <li>
-              <div class="bar-meta"><span>Bladder</span><span>1,680 · 9.5%</span></div>
-              <div class="bar" role="img" aria-label="Bladder, 1,680 cases"><span class="bar-fill" style="width:49.35%"></span></div>
+              <div class="bar-meta"><span>2016</span><span>2,264</span></div>
+              <div class="bar" role="img" aria-label="2016, 2,264 cases in women"><span class="bar-fill is-breast" style="width:60.1%"></span></div>
             </li>
             <li>
-              <div class="bar-meta"><span>Colorectum</span><span>1,644 · 9.3%</span></div>
-              <div class="bar" role="img" aria-label="Colorectum, 1,644 cases"><span class="bar-fill" style="width:48.3%"></span></div>
+              <div class="bar-meta"><span>2018</span><span>3,009</span></div>
+              <div class="bar" role="img" aria-label="2018, 3,009 cases in women"><span class="bar-fill is-breast" style="width:79.9%"></span></div>
             </li>
             <li>
-              <div class="bar-meta"><span>Prostate</span><span>1,411 · 8.0%</span></div>
-              <div class="bar" role="img" aria-label="Prostate, 1,411 cases"><span class="bar-fill" style="width:41.45%"></span></div>
+              <div class="bar-meta"><span>2019</span><span>2,991</span></div>
+              <div class="bar" role="img" aria-label="2019, 2,991 cases in women"><span class="bar-fill is-breast" style="width:79.4%"></span></div>
+            </li>
+            <li>
+              <div class="bar-meta"><span>2021</span><span>3,072</span></div>
+              <div class="bar" role="img" aria-label="2021, 3,072 cases in women"><span class="bar-fill is-breast" style="width:81.6%"></span></div>
+            </li>
+            <li>
+              <div class="bar-meta"><span>2022</span><span>3,230</span></div>
+              <div class="bar" role="img" aria-label="2022, 3,230 cases in women"><span class="bar-fill is-breast" style="width:85.7%"></span></div>
+            </li>
+            <li>
+              <div class="bar-meta"><span>2023</span><span>3,767</span></div>
+              <div class="bar" role="img" aria-label="2023, 3,767 cases in women"><span class="bar-fill is-breast" style="width:100%"></span></div>
+            </li>
+            <li>
+              <div class="bar-meta"><span>2024</span><span>3,754</span></div>
+              <div class="bar" role="img" aria-label="2024, 3,754 cases in women"><span class="bar-fill is-breast" style="width:99.7%"></span></div>
             </li>
           </ol>
         </figure>
+        <p class="src">Ministry of Public Health, National Cancer Registry. Cases in women, breast (C50), 2012 to 2024. 2015 is the breast-cancer table; other years are Table B.
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2012.HTM" target="_blank" rel="noopener noreferrer">2012<span class="sr-only">, opens in a new tab</span></a> ·
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/T2015C50.HTM" target="_blank" rel="noopener noreferrer">2015<span class="sr-only">, opens in a new tab</span></a> ·
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2016.HTM" target="_blank" rel="noopener noreferrer">2016<span class="sr-only">, opens in a new tab</span></a> ·
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2018.HTM" target="_blank" rel="noopener noreferrer">2018<span class="sr-only">, opens in a new tab</span></a> ·
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2019.HTM" target="_blank" rel="noopener noreferrer">2019<span class="sr-only">, opens in a new tab</span></a> ·
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2021.HTM" target="_blank" rel="noopener noreferrer">2021<span class="sr-only">, opens in a new tab</span></a> ·
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2022.HTM" target="_blank" rel="noopener noreferrer">2022<span class="sr-only">, opens in a new tab</span></a> ·
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2023.HTM" target="_blank" rel="noopener noreferrer">2023<span class="sr-only">, opens in a new tab</span></a> ·
+          <a href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2024.HTM" target="_blank" rel="noopener noreferrer">2024<span class="sr-only">, opens in a new tab</span></a>
+        </p>
         <details class="more">
           <summary>Sources and more numbers</summary>
           <div class="more-body">
+            <figure class="chart">
+              <figcaption>Most common cancers, 2024</figcaption>
+              <ol>
+                <li>
+                  <div class="bar-meta"><span>Breast</span><span>3,404 · 19.2%</span></div>
+                  <div class="bar" role="img" aria-label="Breast, 3,404 cases"><span class="bar-fill is-breast" style="width:100%"></span></div>
+                </li>
+                <li>
+                  <div class="bar-meta"><span>Lung</span><span>1,820 · 10.3%</span></div>
+                  <div class="bar" role="img" aria-label="Lung, 1,820 cases"><span class="bar-fill" style="width:53.47%"></span></div>
+                </li>
+                <li>
+                  <div class="bar-meta"><span>Bladder</span><span>1,680 · 9.5%</span></div>
+                  <div class="bar" role="img" aria-label="Bladder, 1,680 cases"><span class="bar-fill" style="width:49.35%"></span></div>
+                </li>
+                <li>
+                  <div class="bar-meta"><span>Colorectum</span><span>1,644 · 9.3%</span></div>
+                  <div class="bar" role="img" aria-label="Colorectum, 1,644 cases"><span class="bar-fill" style="width:48.3%"></span></div>
+                </li>
+                <li>
+                  <div class="bar-meta"><span>Prostate</span><span>1,411 · 8.0%</span></div>
+                  <div class="bar" role="img" aria-label="Prostate, 1,411 cases"><span class="bar-fill" style="width:41.45%"></span></div>
+                </li>
+              </ol>
+            </figure>
+            <p class="src">IARC GLOBOCAN 2024, both sexes. <a href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">Fact sheet (PDF)<span class="sr-only">, opens in a new tab</span></a></p>
             <p>The pound has lost 98% of its value since 2019. Banks became insolvent, and more than a third of people were pushed into poverty. <a class="cite" href="https://www.worldbank.org/ext/en/country/lebanon" target="_blank" rel="noopener noreferrer">World Bank<span class="sr-only">, opens in a new tab</span></a></p>
-            <p>IARC GLOBOCAN 2024: 42,382 people living with a cancer found in the last five years. 8,706 cancer deaths. About 1 in 4 people develops cancer before age 75 (24.2%). Breast cancer caused 978 deaths, second among cancers. 9,615 people are living with breast cancer found in the last five years. 38.7% is 3,404 of 8,798 new cancers among women. <a class="cite" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC fact sheet (PDF)<span class="sr-only">, opens in a new tab</span></a></p>
-            <p>New cases rose 162% from 1990 to 2023, the fastest rise of any country (Global Burden of Disease 2023, IHME, <cite>The Lancet</cite>, 2025). Deaths rose 80%. Cases have been rising about 4% a year. In 2023 there were 233.5 new cases per 100,000 people. <a class="cite" href="https://www.healthdata.org/news-events/insights-blog/acting-data/why-does-lebanon-have-some-fastest-growing-rates-cancer-world" target="_blank" rel="noopener noreferrer">GBD 2023 / IHME<span class="sr-only">, opens in a new tab</span></a></p>
-            <p>At Hôtel-Dieu de France — a different Beirut hospital, not AUBMC — 32% interrupted treatment, mostly chemotherapy (Eid et al., 2024, n=182). In February 2022, 43% of those households earned under $300 a month. Even with coverage, 70% paid for medication themselves. AUBMC’s own costs are not on this page. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11145953/" target="_blank" rel="noopener noreferrer">PMC11145953<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>IARC GLOBOCAN 2024, a separate estimate from the registry counts above: 3,404 new breast cancer cases, both sexes, 19.2% of all new cancers. 38.7% is 3,404 of 8,798 new cancers among women. Breast cancer caused 978 deaths, second among cancers. 9,615 people are living with breast cancer found in the last five years. 42,382 people are living with a cancer found in the last five years. 8,706 cancer deaths. About 1 in 4 people develops cancer before age 75 (24.2%). In the 2024 registry table, the largest age group among women was 55–59 (548 of 3,754). <a class="cite" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC fact sheet (PDF)<span class="sr-only">, opens in a new tab</span></a> <a class="cite" href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2024.HTM" target="_blank" rel="noopener noreferrer">2024 registry table<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>At Hôtel-Dieu de France — a different Beirut hospital, not AUBMC — 32% interrupted treatment, mostly chemotherapy (Eid et al., 2024, n=182). Even with coverage, 70% paid for medication themselves. AUBMC’s own costs are not on this page. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11145953/" target="_blank" rel="noopener noreferrer">PMC11145953<span class="sr-only">, opens in a new tab</span></a></p>
             <p>The Naef K. Basile Cancer Institute at AUBMC enrolls about 2,500 new cancer patients a year. <a class="cite" href="https://sites.aub.edu.lb/aubmcacc/nkbci/nkbci-patient-care-services-2/" target="_blank" rel="noopener noreferrer">AUBMC<span class="sr-only">, opens in a new tab</span></a></p>
-            <p>This fund, as AUBMC reported it: 12 patients (9 women, 3 men), all Lebanese. 19 encounters — 16 for inpatient treatment, 3 for outpatient imaging. In July 2026 it helped three Lebanese women in treatment for breast cancer. Diagnoses for the other nine were not supplied. Social services found each patient highly eligible. Most had been displaced by the war.</p>
-            <p>AUB publishes a 4% spending policy, on the 20-quarter moving average. AUB’s example, not this fund’s size: a $3 million endowment pays about $120,000 in year one. <a class="cite" href="https://boldly.aub.edu.lb/faq/" target="_blank" rel="noopener noreferrer">AUB Boldly FAQ<span class="sr-only">, opens in a new tab</span></a> This page does not say what share of a gift reaches a patient.</p>
+            <!-- Fund detail held off the page: 9 women and 3 men, all Lebanese; other nine diagnoses not supplied; social services found each patient highly eligible; most had been displaced by the war. -->
+            <p>This fund, as AUBMC reported it: 19 hospital visits covered: 16 inpatient treatments and 3 imaging scans, for 12 patients.</p>
+            <p>AUB publishes a 4% spending policy, on the 20-quarter moving average. <a class="cite" href="https://boldly.aub.edu.lb/faq/" target="_blank" rel="noopener noreferrer">AUB Boldly FAQ<span class="sr-only">, opens in a new tab</span></a> This page does not say what share of a gift reaches a patient.</p>
           </div>
         </details>
       </section>
@@ -351,43 +379,18 @@
 
       <section id="give" class="wrap" aria-labelledby="give-title">
         <h2 id="give-title">Give</h2>
-        <p class="lede">You pay on AUB’s site. These amounts are only a reminder for that form.</p>
-        <fieldset class="segment">
-          <legend class="sr-only">Gift frequency</legend>
-          <div class="segment-bar" role="radiogroup" aria-label="Gift frequency">
-            <label class="segment-opt"><input type="radio" name="freq" value="monthly" checked /><span>Monthly</span></label>
-            <label class="segment-opt"><input type="radio" name="freq" value="onetime" /><span>One-time</span></label>
-          </div>
-        </fieldset>
-        <div id="amounts-monthly" class="chips">
-          <p class="chip-label" id="monthly-amounts-label">Monthly amount</p>
-          <div class="chip-row" role="radiogroup" aria-labelledby="monthly-amounts-label">
-            <label class="chip"><input type="radio" name="amt-monthly" value="50" checked /><span>$50</span></label>
-            <label class="chip"><input type="radio" name="amt-monthly" value="150" /><span>$150</span></label>
-            <label class="chip"><input type="radio" name="amt-monthly" value="500" /><span>$500</span></label>
-          </div>
+        <p class="lede">Monthly or once. You finish the gift on AUB’s site.</p>
+        <div class="hero-actions give-actions">
+          <a class="btn btn-primary" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give monthly<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
+          <a class="btn btn-outline" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give once<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
         </div>
-        <div id="amounts-onetime" class="chips" hidden>
-          <p class="chip-label" id="onetime-amounts-label">One-time amount</p>
-          <div class="chip-row" role="radiogroup" aria-labelledby="onetime-amounts-label">
-            <label class="chip"><input type="radio" name="amt-onetime" value="250" checked /><span>$250</span></label>
-            <label class="chip"><input type="radio" name="amt-onetime" value="1000" /><span>$1,000</span></label>
-            <label class="chip"><input type="radio" name="amt-onetime" value="5000" /><span>$5,000</span></label>
-            <label class="chip"><input type="radio" name="amt-onetime" value="10000" /><span>$10,000</span></label>
-            <label class="chip"><input type="radio" name="amt-onetime" value="other" /><span>Other</span></label>
-          </div>
-          <div id="other-wrap" class="other-wrap" hidden>
-            <label for="other-amount">Other amount (USD)</label>
-            <input id="other-amount" name="other-amount" type="number" min="1" step="1" inputmode="numeric" />
-          </div>
-        </div>
-        <a class="btn btn-primary btn-block" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give on AUB’s site<span class="sr-only">, opens in a new tab</span></a>
         <p class="give-hint">Designation: WICHE Oncology Endowed Fund</p>
+        <p class="give-hint">WICHE Cancer Fund is the same fund.</p>
+        <p class="dedicate">In honor of, or in memory of, someone. You can dedicate your gift when you give on AUB’s page.</p>
         <details class="fold">
           <summary>Other ways to give</summary>
-          <p>Checks payable to AUB, memo WICHE Oncology Endowed Fund. Mail them to Office of Development, American University of Beirut, 3 Dag Hammarskjold Plaza, 8th Floor, New York, NY 10017.</p>
+          <p>Checks payable to AUB. Write the designation above on the memo line. Mail them to Office of Development, American University of Beirut, 3 Dag Hammarskjold Plaza, 8th Floor, New York, NY 10017.</p>
           <p>For stock, a donor-advised fund, or crypto, write to <a href="mailto:advancement@aub.edu.lb">advancement@aub.edu.lb</a>.</p>
-          <p>You can name this fund in a will, or give in someone’s honor. Ask Advancement for the wording. This is not legal advice.</p>
           <p>Employer match lookup is not on this page yet. If your employer matches gifts to a US 501(c)(3), give on AUB’s site and send them the receipt.</p>
         </details>
       </section>
@@ -407,7 +410,7 @@
         <p class="toast" id="share-toast" role="status" aria-live="polite"></p>
         <details id="ways" class="fold">
           <summary>Ask a friend</summary>
-          <p class="ask-preview" id="ask-preview">I'm asking friends to give to the WICHE Oncology Endowed Fund at AUBMC, for cancer patients in Lebanon. Breast cancer is the most common cancer in Lebanon. Gifts go to AUB's US 501(c)(3).</p>
+          <p class="ask-preview" id="ask-preview">I'm asking friends to give to the WICHE Cancer Fund at AUBMC, for breast cancer care all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment. Gifts go to AUB's US 501(c)(3).</p>
           <button type="button" class="btn btn-outline" id="ask-copy">Copy note</button>
           <p class="toast" id="ask-toast" role="status" aria-live="polite"></p>
         </details>
@@ -424,7 +427,7 @@
       <!-- Founder note: replace only after Randa Armoush supplies her own words. Do not draft it. -->
       <p class="note-hold">A note from the founder, Randa Armoush, is coming soon.</p>
       <ul class="fine">
-        <li>WICHE Oncology Endowed Fund</li>
+        <li>WICHE Cancer Fund</li>
         <li>American University of Beirut, US 501(c)(3)</li>
         <li class="ein-item"><span class="ein">EIN 13-5596846</span><span class="hint">Pending Advancement confirmation for receipts.</span></li>
         <li><a href="https://projects.propublica.org/nonprofits/organizations/135596846" target="_blank" rel="noopener noreferrer">Form 990<span class="sr-only"> on ProPublica, opens in a new tab</span></a></li>

@@ -7,13 +7,13 @@
   var CAMPAIGN = "wiche_share";
 
   var TEXT = {
-    wa: "Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. Gifts go to AUB's US 501(c)(3). ",
-    ig: "Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. Gifts go to AUB's US 501(c)(3). ",
-    x: "Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. WICHE Oncology Endowed Fund at AUBMC. Gifts go to AUB's US 501(c)(3). ",
-    li: "Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024, 19.2% of all new cancers (IARC GLOBOCAN 2024). The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. In July 2026 the fund assisted three Lebanese women in treatment for breast cancer. Gifts go to AUB's US 501(c)(3). "
+    wa: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund. In 2024 Lebanon’s registry recorded 3,754 new breast cancer cases in women. Gifts go to AUB's US 501(c)(3). ",
+    ig: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund. In 2024 Lebanon’s registry recorded 3,754 new breast cancer cases in women. Gifts go to AUB's US 501(c)(3). ",
+    x: "WICHE Cancer Fund: breast cancer care at AUBMC, all year. 3,754 new cases in women in 2024, Lebanon’s national registry. ",
+    li: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund. Lebanon’s registry recorded 3,754 new breast cancer cases in women in 2024, up from 2,252 in 2012. GLOBOCAN 2024: 38.7% of new cancers in women. In July 2026 the fund helped three Lebanese women with breast cancer get treatment. Gifts go to AUB's US 501(c)(3). "
   };
 
-  var ASK_FRIENDS = "I'm asking friends to give to the WICHE Oncology Endowed Fund at AUBMC, for cancer patients in Lebanon. Breast cancer is the most common cancer in Lebanon. Gifts go to AUB's US 501(c)(3). ";
+  var ASK_FRIENDS = "I'm asking friends to give to the WICHE Cancer Fund at AUBMC, for breast cancer care all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment. Gifts go to AUB's US 501(c)(3). ";
 
   document.body.classList.toggle("breast-focus", BREAST_FOCUS);
 
@@ -96,30 +96,4 @@
       toast("share-toast", "LinkedIn text copied. Paste it after the share dialog opens.");
     });
   });
-
-  var monthly = document.getElementById("amounts-monthly");
-  var onetime = document.getElementById("amounts-onetime");
-  var otherWrap = document.getElementById("other-wrap");
-
-  function syncOther() {
-    var other = document.querySelector('input[name="amt-onetime"][value="other"]');
-    var show = !!(other && other.checked && onetime && !onetime.hidden);
-    if (otherWrap) otherWrap.hidden = !show;
-  }
-
-  function showFreq(freq) {
-    var isMonthly = freq === "monthly";
-    if (monthly) monthly.hidden = !isMonthly;
-    if (onetime) onetime.hidden = isMonthly;
-    syncOther();
-  }
-
-  document.querySelectorAll('input[name="freq"]').forEach(function (r) {
-    r.addEventListener("change", function () { showFreq(r.value); });
-  });
-  document.querySelectorAll('input[name="amt-onetime"]').forEach(function (r) {
-    r.addEventListener("change", syncOther);
-  });
-  var selected = document.querySelector('input[name="freq"]:checked');
-  showFreq(selected ? selected.value : "monthly");
 })();
