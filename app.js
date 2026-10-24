@@ -1,59 +1,21 @@
 (function () {
   "use strict";
 
-  /* October banner, share text, utm tag, and the ask-a-friend note.
-     Off after 2026-10-31. No match line until a named donor confirms it in writing. */
-  var CAMPAIGN_OCTOBER = true;
-  var CAMPAIGN_END = "2026-10-31";
-  var CAMPAIGN = "wiche_page";
+  /* Breast cancer stays in view all year. No end date.
+     No match line until a named donor confirms it in writing. */
+  var BREAST_FOCUS = true;
+  var CAMPAIGN = "wiche_share";
 
-  var TEXT_BASE = {
-    wa: "Cancer care at AUBMC is billed in dollars. The pound has lost 98% of its value since 2019. This is the WICHE Oncology Endowed Fund at AUB — US 501(c)(3) — that pays for treatment. I'm giving. ",
-    ig: "Cancer care at AUBMC is billed in dollars. The pound has lost 98% of its value since 2019. This is the WICHE Oncology Endowed Fund at AUB — US 501(c)(3) — that pays for treatment. I'm giving. ",
-    x: "The WICHE Oncology Endowed Fund at AUBMC. Gifts to AUB's US 501(c)(3). ",
-    li: "AUBMC can treat cancer. After 2019, many families in Lebanon cannot pay for it in dollars. The WICHE Oncology Endowed Fund at AUB (US 501(c)(3), EIN on the page) invests gifts and disburses to patients the medical and social-work committee approves. I'm in. "
+  var TEXT = {
+    wa: "Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. Gifts go to AUB's US 501(c)(3). ",
+    ig: "Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. Gifts go to AUB's US 501(c)(3). ",
+    x: "Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. WICHE Oncology Endowed Fund at AUBMC. Gifts go to AUB's US 501(c)(3). ",
+    li: "Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024, 19.2% of all new cancers (IARC GLOBOCAN 2024). The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. In July 2026 the fund assisted three Lebanese women in treatment for breast cancer. Gifts go to AUB's US 501(c)(3). "
   };
 
-  var TEXT_OCT = {
-    wa: "October is Breast Cancer Awareness Month. Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. Gifts go to AUB's US 501(c)(3). ",
-    ig: "October is Breast Cancer Awareness Month. Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. Gifts go to AUB's US 501(c)(3). ",
-    x: "October: breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024. WICHE Oncology Endowed Fund at AUBMC. Gifts go to AUB's US 501(c)(3). ",
-    li: "October is Breast Cancer Awareness Month. Breast cancer is the most common cancer in Lebanon, with 3,404 new cases in 2024, 19.2% of all new cancers (IARC GLOBOCAN 2024). The WICHE Oncology Endowed Fund at AUBMC helps patients who can't pay. In July 2026 the fund assisted three Lebanese women in treatment for breast cancer. Gifts go to AUB's US 501(c)(3). "
-  };
+  var ASK_FRIENDS = "I'm asking friends to give to the WICHE Oncology Endowed Fund at AUBMC, for cancer patients in Lebanon. Breast cancer is the most common cancer in Lebanon. Gifts go to AUB's US 501(c)(3). ";
 
-  var ASK_FRIENDS = "This October I'm asking friends to give to the WICHE Oncology Endowed Fund at AUBMC, for cancer patients in Lebanon. Breast cancer is the most common cancer in Lebanon. Gifts go to AUB's US 501(c)(3). ";
-  var TEXT = TEXT_BASE;
-
-  function pad2(n) {
-    return (n < 10 ? "0" : "") + n;
-  }
-
-  function isoToday() {
-    var d = new Date();
-    return d.getFullYear() + "-" + pad2(d.getMonth() + 1) + "-" + pad2(d.getDate());
-  }
-
-  function octoberOn() {
-    return CAMPAIGN_OCTOBER === true && isoToday() <= CAMPAIGN_END;
-  }
-
-  function applyCampaign() {
-    var on = octoberOn();
-    TEXT = on ? TEXT_OCT : TEXT_BASE;
-    CAMPAIGN = on ? "wiche_october" : "wiche_page";
-    var dismissed = false;
-    try {
-      dismissed = localStorage.getItem("wiche_october_2026_banner_dismissed") === "1";
-    } catch (e) {}
-    var theme = document.querySelector('meta[name="theme-color"]');
-    if (theme) theme.setAttribute("content", "#441f41");
-    var icon = document.querySelector('link[rel="icon"]');
-    if (icon) icon.setAttribute("href", on ? "favicon-october.svg" : "favicon.svg");
-    var banner = document.getElementById("october-banner");
-    if (banner) banner.hidden = !(on && !dismissed);
-    var ways = document.getElementById("ways");
-    if (ways) ways.hidden = !on;
-  }
+  document.body.classList.toggle("breast-focus", BREAST_FOCUS);
 
   function pageUrl() {
     if (window.location.protocol === "file:") return window.location.href.split("?")[0];
@@ -103,17 +65,7 @@
     if (el) el.addEventListener(type, fn);
   }
 
-  applyCampaign();
   setShareHrefs();
-
-  on("october-dismiss", "click", function () {
-    try {
-      localStorage.setItem("wiche_october_2026_banner_dismissed", "1");
-    } catch (e) {}
-    var banner = document.getElementById("october-banner");
-    if (banner) banner.hidden = true;
-    document.documentElement.classList.add("banner-off");
-  });
 
   on("ask-copy", "click", function () {
     copyText(ASK_FRIENDS + withUtm("friends")).then(function () {
