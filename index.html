@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>WICHE Oncology Endowed Fund</title>
+    <script>
+      (function () {
+        var off = false;
+        try { off = localStorage.getItem("wiche_october_2026_banner_dismissed") === "1"; } catch (e) {}
+        var d = new Date(), p = function (n) { return (n < 10 ? "0" : "") + n; };
+        var iso = d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+        if (off || iso > "2026-10-31") document.documentElement.classList.add("banner-off");
+      })();
+    </script>
+    <meta name="description" content="Cancer care at AUBMC is priced in dollars. Since 2019 the Lebanese pound has lost 98 percent of its value. This endowment pays for treatment so a diagnosis is not the bill that stops care." />
+    <meta name="theme-color" content="#441f41" />
+    <link rel="icon" href="favicon-october.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WICHE Oncology Endowed Fund" />
+    <meta property="og:description" content="Cancer care at AUBMC is priced in dollars. Since 2019 the Lebanese pound has lost 98 percent of its value. This endowment pays for treatment so a diagnosis is not the bill that stops care." />
+    <!-- October 2026: og-image-october.png. After 2026-10-31 switch og:image and twitter:image back to og-image.png. -->
+    <meta property="og:image" content="og-image-october.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="October card with a geometric pink ribbon: Breast cancer is the most common cancer in Lebanon. WICHE Oncology Endowed Fund. No photographs of people." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WICHE Oncology Endowed Fund" />
+    <meta name="twitter:description" content="Cancer care at AUBMC is priced in dollars. Since 2019 the Lebanese pound has lost 98 percent of its value. This endowment pays for treatment so a diagnosis is not the bill that stops care." />
+    <meta name="twitter:image" content="og-image-october.png" />
+    <style>
+      :root {
+        --cream: #fffaf1;
+        --ink: #2d1829;
+        --plum: #441f41;
+        --rose: #c2185b;
+        --line: #eadfd6;
+        --muted: #5c3d52;
+        --wash: #f6efe8;
+        --wa: #0f7a40;
+        --page: 40rem;
+        --serif: Georgia, "Iowan Old Style", Palatino, "Times New Roman", serif;
+        --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      @media (min-width: 900px) { body { font-size: 17px; } }
+      svg { max-width: 100%; }
+      a { color: var(--plum); }
+      a:hover { color: var(--ink); }
+      :focus-visible { outline: 2px solid var(--plum); outline-offset: 3px; }
+      [hidden] { display: none !important; }
+      .sr-only {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+      }
+      .skip {
+        position: absolute; left: 0.75rem; top: -3rem; z-index: 5;
+        background: var(--plum); color: var(--cream); padding: 0.5rem 0.75rem; text-decoration: none;
+      }
+      .skip:focus { top: 0.75rem; color: var(--cream); }
+      .wrap { width: min(100%, var(--page)); margin-inline: auto; padding-inline: 1.25rem; }
+      .ribbon-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+      .ribbon {
+        display: block; width: auto; height: 18px; aspect-ratio: 100 / 140;
+        color: var(--rose); fill: none; stroke: currentColor;
+      }
+      .ribbon-badge {
+        display: inline-flex; align-items: center; justify-content: center;
+        padding: 3px 0; margin: 0; border-radius: 999px;
+        background: var(--cream); flex: 0 0 auto;
+      }
+      html.banner-off .october-banner { display: none; }
+      .october-banner { background: var(--plum); color: var(--cream); }
+      .october-inner { display: flex; align-items: center; gap: 0.55rem; padding-block: 0.4rem; }
+      .october-copy { margin: 0; flex: 1 1 auto; min-width: 0; font-size: 0.875rem; line-height: 1.3; }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-height: 48px; padding: 0.5rem 1.1rem; border-radius: 999px;
+        border: 2px solid transparent; background: transparent; color: var(--ink);
+        font: inherit; font-weight: 650; line-height: 1.2; text-decoration: none; cursor: pointer;
+      }
+      .btn-primary { background: var(--plum); border-color: var(--plum); color: var(--cream); }
+      .btn-primary:hover { background: var(--ink); border-color: var(--ink); color: var(--cream); }
+      .btn-outline { border-color: var(--plum); color: var(--ink); }
+      .btn-outline:hover { background: var(--wash); }
+      .btn-on-dark {
+        min-height: 44px; padding: 0.2rem 0.8rem; background: var(--cream);
+        border-color: var(--cream); color: var(--plum); font-size: 0.875rem;
+      }
+      .btn-dismiss {
+        min-height: 44px; padding: 0.2rem 0.7rem; background: transparent;
+        border-color: rgba(255, 250, 241, 0.7); color: var(--cream); font-size: 0.875rem;
+      }
+      .dismiss-x { display: none; font-size: 1.35rem; line-height: 1; }
+      .btn-share { background: var(--wa); border-color: var(--wa); color: #fff; }
+      .btn-share:hover { background: #0c6434; border-color: #0c6434; color: #fff; }
+      .btn-block { width: 100%; margin-top: 0.35rem; }
+      .october-banner :focus-visible { outline-color: var(--cream); }
+      .hero { padding-block: 2.75rem 2rem; }
+      .kicker {
+        margin: 0 0 0.85rem; font-size: 0.75rem; font-weight: 700;
+        letter-spacing: 0.08em; text-transform: uppercase; color: var(--plum);
+      }
+      h1 {
+        margin: 0; max-width: 16ch; font-family: var(--serif);
+        font-size: clamp(2.35rem, 7vw, 4rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.03em;
+      }
+      h1 em { font-style: italic; font-weight: 500; }
+      .subhead { max-width: 36ch; margin: 1rem 0 0; font-size: 1.125rem; line-height: 1.4; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.5rem; }
+      main section { padding-block: 2.5rem; }
+      main section + section { border-top: 1px solid var(--line); }
+      h2 {
+        margin: 0 0 0.55rem; font-family: var(--serif);
+        font-size: clamp(1.7rem, 4vw, 2.25rem); font-weight: 500; line-height: 1.15;
+      }
+      .lede { max-width: 62ch; margin: 0 0 1.25rem; }
+      .stat-strip {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem 0.9rem;
+        list-style: none; margin: 0 0 1.5rem; padding: 0;
+      }
+      .stat-strip .num {
+        margin: 0; font-family: var(--serif); font-size: clamp(1.7rem, 4vw, 2.2rem);
+        font-weight: 500; line-height: 1; letter-spacing: -0.03em; color: var(--plum);
+      }
+      .stat-strip p:not(.num) { margin: 0.3rem 0 0.15rem; font-size: 0.875rem; line-height: 1.3; color: var(--muted); }
+      .src { font-size: 0.75rem; }
+      .chart { margin: 0; }
+      .chart figcaption { margin: 0 0 0.7rem; font-weight: 650; }
+      .chart ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.65rem; }
+      .bar-meta { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.2rem; font-size: 0.875rem; }
+      .bar { height: 8px; background: transparent; }
+      .bar-fill { display: block; height: 100%; background: #c9b3c0; }
+      .bar-fill.is-breast { background: var(--rose); }
+      .more, .fold { margin-top: 1.35rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .faq { margin-top: 0.5rem; }
+      summary { cursor: pointer; padding: 0.75rem 0; min-height: 44px; font-weight: 650; }
+      .more summary { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
+      .more-body p, .faq p, .fold p { max-width: 62ch; margin: 0 0 0.8rem; }
+      .cite { font-size: 0.8125rem; }
+      .flow-steps { list-style: none; max-width: 26rem; margin: 0; padding: 0; }
+      .flow-steps li { display: grid; grid-template-columns: 1.75rem 1fr; gap: 0.7rem; position: relative; padding-bottom: 0.85rem; }
+      .flow-steps li::before {
+        content: ""; position: absolute; left: 0.8rem; top: 1.7rem; bottom: 0; width: 1px; background: var(--line);
+      }
+      .flow-steps li:last-child { padding-bottom: 0; }
+      .flow-steps li:last-child::before { content: none; }
+      .flow-num {
+        display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border-radius: 50%;
+        background: var(--plum); color: var(--cream); font-size: 0.75rem; font-weight: 700; position: relative; z-index: 1;
+      }
+      .step-title { margin: 0.1rem 0; font-weight: 650; }
+      .flow-steps p { margin: 0; color: var(--muted); }
+      .flow-steps .cite { display: inline-block; margin-top: 0.2rem; }
+      .faq details { border-top: 1px solid var(--line); }
+      .faq details:last-child { border-bottom: 1px solid var(--line); }
+      .segment { border: 0; margin: 0 0 0.9rem; padding: 0; }
+      .segment-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+      .segment-opt, .chip { position: relative; }
+      .segment-opt span, .chip span {
+        display: flex; align-items: center; justify-content: center; min-height: 48px;
+        border: 2px solid var(--line); font-weight: 650; cursor: pointer;
+      }
+      .segment-opt span { border-radius: 999px; }
+      .chip span { border-radius: 12px; background: var(--cream); }
+      .segment-opt input, .chip input { position: absolute; opacity: 0; pointer-events: none; }
+      .segment-opt input:checked + span, .chip input:checked + span {
+        background: var(--plum); border-color: var(--plum); color: var(--cream);
+      }
+      .segment-opt input:focus-visible + span, .chip input:focus-visible + span {
+        outline: 2px solid var(--plum); outline-offset: 3px;
+      }
+      .chip-label {
+        margin: 0 0 0.4rem; font-size: 0.75rem; font-weight: 700;
+        letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+      }
+      .chip-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.45rem; }
+      .chips { margin-bottom: 0.85rem; }
+      .other-wrap { margin-top: 0.7rem; }
+      .other-wrap label { display: block; margin-bottom: 0.25rem; font-size: 0.875rem; }
+      input[type="number"] {
+        width: 100%; min-height: 48px; padding: 0.45rem 0.7rem;
+        border: 2px solid var(--line); border-radius: 12px; background: var(--cream); color: var(--ink); font: inherit;
+      }
+      .give-hint { margin: 0.65rem 0 0; color: var(--muted); }
+      .share-primary { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+      .share-more {
+        display: flex; flex-wrap: wrap; gap: 0.15rem 0.85rem;
+        margin: 0.45rem 0 0; padding: 0; list-style: none;
+      }
+      .share-link {
+        display: inline-flex; align-items: center; justify-content: center;
+        min-height: 44px; min-width: 44px; padding: 0 0.3rem; border: 0; background: none;
+        font: inherit; font-size: 0.875rem; color: var(--plum); text-decoration: underline;
+        text-underline-offset: 0.18em; cursor: pointer;
+      }
+      .toast { min-height: 1.2rem; margin: 0.4rem 0 0; font-size: 0.875rem; color: var(--plum); }
+      .ask-preview {
+        max-width: 62ch; margin: 0 0 0.75rem; padding: 0.7rem 0.85rem;
+        border-left: 3px solid var(--rose); background: var(--wash);
+      }
+      .site-foot { padding-block: 2rem 2.5rem; border-top: 1px solid var(--line); }
+      .note-hold { margin: 0 0 0.9rem; font-family: var(--serif); font-style: italic; }
+      .fine { display: flex; flex-wrap: wrap; gap: 0.35rem 1.15rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+      .fine a { font-weight: 650; }
+      .ein-item { flex-basis: 100%; }
+      .ein { white-space: nowrap; }
+      .hint { display: block; margin-top: 0.1rem; font-size: 0.8125rem; color: var(--muted); font-weight: 400; }
+      .tax, .foot-note { max-width: 62ch; margin: 0.7rem 0 0; font-size: 0.9375rem; color: var(--muted); }
+      @media (min-width: 700px) {
+        .stat-strip { grid-template-columns: repeat(4, 1fr); }
+      }
+      @media (max-width: 700px) {
+        .october-banner .october-inner { gap: 0.3rem; padding-right: 0.75rem; }
+        .october-copy { font-size: 0.875rem; line-height: 1.25; white-space: nowrap; }
+        .october-banner .btn { min-width: 44px; }
+        .dismiss-word { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+        .dismiss-x { display: inline; }
+        .btn-dismiss { width: 44px; padding-inline: 0; }
+      }
+      @media (min-width: 701px) {
+        .october-banner .october-inner {
+          width: 100%; max-width: none;
+          padding-left: max(1.25rem, calc((100% - var(--page)) / 2 + 1.25rem));
+          padding-right: 1.5rem;
+        }
+        .october-copy { font-size: 0.875rem; }
+      }
+      @media print {
+        .october-banner, .skip, #share { display: none !important; }
+        h1, h2, .step-title { break-after: avoid; }
+        .stat-strip li, .flow-steps li, .faq details { break-inside: avoid; }
+      }
+    </style>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <svg class="ribbon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <symbol id="ribbon-mark" viewBox="0 0 100 140">
+        <path d="M28 132 L50 80 C62 55 76 38 67 21 C60 7 40 7 33 21 C24 38 38 55 50 80 L72 132" fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </svg>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="october-banner" id="october-banner">
+      <!-- MATCH: add only once a named donor confirms amount and deadline in writing. Do not publish a match before then. -->
+      <div class="october-inner wrap">
+        <span class="ribbon-badge">
+          <svg class="ribbon" viewBox="0 0 100 140" aria-hidden="true" focusable="false">
+            <use href="#ribbon-mark"></use>
+          </svg>
+        </span>
+        <p class="october-copy">October is breast cancer month.</p>
+        <a class="btn btn-on-dark" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give<span class="sr-only"> to AUB, opens in a new tab</span></a>
+        <button type="button" class="btn btn-dismiss" id="october-dismiss" aria-label="Dismiss"><span class="dismiss-word">Dismiss</span><span class="dismiss-x" aria-hidden="true">×</span></button>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="wrap">
+        <p class="kicker">WICHE Oncology Endowed Fund</p>
+        <h1>Cancer care at AUBMC is priced in <em>dollars</em>.</h1>
+        <p class="subhead">The pound has lost 98% of its value since 2019. This fund pays for treatment.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give<span class="sr-only"> to AUB. Designation: WICHE Oncology Endowed Fund. Opens in a new tab.</span></a>
+          <a class="btn btn-outline" href="#how">See where it goes</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="lebanon" class="wrap" aria-labelledby="lebanon-title">
+        <!-- PENDING: diagnosis categories for the 9 non-breast-cancer patients not yet supplied by AUBMC. Do not infer. -->
+        <h2 id="lebanon-title">Cancer in Lebanon</h2>
+        <p class="lede">Breast cancer is the most common cancer here. These counts are from IARC, 2024.</p>
+        <ul class="stat-strip">
+          <li>
+            <p class="num">3,404</p>
+            <p>New breast cancer cases</p>
+            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC<span class="sr-only"> GLOBOCAN 2024 fact sheet (PDF), opens in a new tab</span></a>
+          </li>
+          <li>
+            <p class="num">19.2%</p>
+            <p>Of all new cancers</p>
+            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC<span class="sr-only"> GLOBOCAN 2024 fact sheet (PDF), opens in a new tab</span></a>
+          </li>
+          <li>
+            <p class="num">38.7%</p>
+            <p>Of new cancers in women</p>
+            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC<span class="sr-only"> GLOBOCAN 2024 fact sheet (PDF), opens in a new tab</span></a>
+          </li>
+          <li>
+            <p class="num">17,728</p>
+            <p>All new cancers</p>
+            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC<span class="sr-only"> GLOBOCAN 2024 fact sheet (PDF), opens in a new tab</span></a>
+          </li>
+        </ul>
+        <figure class="chart">
+          <figcaption>Most common cancers, 2024</figcaption>
+          <ol>
+            <li>
+              <div class="bar-meta"><span>Breast</span><span>3,404 · 19.2%</span></div>
+              <div class="bar" role="img" aria-label="Breast, 3,404 cases"><span class="bar-fill is-breast" style="width:100%"></span></div>
+            </li>
+            <li>
+              <div class="bar-meta"><span>Lung</span><span>1,820 · 10.3%</span></div>
+              <div class="bar" role="img" aria-label="Lung, 1,820 cases"><span class="bar-fill" style="width:53.47%"></span></div>
+            </li>
+            <li>
+              <div class="bar-meta"><span>Bladder</span><span>1,680 · 9.5%</span></div>
+              <div class="bar" role="img" aria-label="Bladder, 1,680 cases"><span class="bar-fill" style="width:49.35%"></span></div>
+            </li>
+            <li>
+              <div class="bar-meta"><span>Colorectum</span><span>1,644 · 9.3%</span></div>
+              <div class="bar" role="img" aria-label="Colorectum, 1,644 cases"><span class="bar-fill" style="width:48.3%"></span></div>
+            </li>
+            <li>
+              <div class="bar-meta"><span>Prostate</span><span>1,411 · 8.0%</span></div>
+              <div class="bar" role="img" aria-label="Prostate, 1,411 cases"><span class="bar-fill" style="width:41.45%"></span></div>
+            </li>
+          </ol>
+        </figure>
+        <details class="more">
+          <summary>Sources and more numbers</summary>
+          <div class="more-body">
+            <p>The pound has lost 98% of its value since 2019. Banks became insolvent, and more than a third of people were pushed into poverty. <a class="cite" href="https://www.worldbank.org/ext/en/country/lebanon" target="_blank" rel="noopener noreferrer">World Bank<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>IARC GLOBOCAN 2024: 42,382 people living with a cancer found in the last five years. 8,706 cancer deaths. About 1 in 4 people develops cancer before age 75 (24.2%). Breast cancer caused 978 deaths, second among cancers. 9,615 people are living with breast cancer found in the last five years. 38.7% is 3,404 of 8,798 new cancers among women. <a class="cite" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">IARC fact sheet (PDF)<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>New cases rose 162% from 1990 to 2023, the fastest rise of any country (Global Burden of Disease 2023, IHME, <cite>The Lancet</cite>, October 2025). Deaths rose 80%. Cases have been rising about 4% a year. In 2023 there were 233.5 new cases per 100,000 people. <a class="cite" href="https://www.healthdata.org/news-events/insights-blog/acting-data/why-does-lebanon-have-some-fastest-growing-rates-cancer-world" target="_blank" rel="noopener noreferrer">GBD 2023 / IHME<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>At Hôtel-Dieu de France — a different Beirut hospital, not AUBMC — 32% interrupted treatment, mostly chemotherapy (Eid et al., 2024, n=182). In February 2022, 43% of those households earned under $300 a month. Even with coverage, 70% paid for medication themselves. AUBMC’s own costs are not on this page. <a class="cite" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11145953/" target="_blank" rel="noopener noreferrer">PMC11145953<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>The Naef K. Basile Cancer Institute at AUBMC enrolls about 2,500 new cancer patients a year. <a class="cite" href="https://sites.aub.edu.lb/aubmcacc/nkbci/nkbci-patient-care-services-2/" target="_blank" rel="noopener noreferrer">AUBMC<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>This fund, as AUBMC reported it: 12 patients (9 women, 3 men), all Lebanese. 19 encounters — 16 for inpatient treatment, 3 for outpatient imaging. In July 2026 it helped three Lebanese women in treatment for breast cancer. Diagnoses for the other nine were not supplied. Social services found each patient highly eligible. Most had been displaced by the war.</p>
+            <p>AUB publishes a 4% spending policy, on the 20-quarter moving average. AUB’s example, not this fund’s size: a $3 million endowment pays about $120,000 in year one. <a class="cite" href="https://boldly.aub.edu.lb/faq/" target="_blank" rel="noopener noreferrer">AUB Boldly FAQ<span class="sr-only">, opens in a new tab</span></a> This page does not say what share of a gift reaches a patient.</p>
+          </div>
+        </details>
+      </section>
+
+      <section id="how" class="wrap" aria-labelledby="how-title">
+        <h2 id="how-title">Where the money goes</h2>
+        <p class="lede">You give to AUB. AUBMC decides who is helped.</p>
+        <ol class="flow-steps">
+          <li>
+            <span class="flow-num">1</span>
+            <div>
+              <p class="step-title">You give</p>
+              <p>On AUB’s site, designated to this fund.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-num">2</span>
+            <div>
+              <p class="step-title">AUB holds it</p>
+              <p>A US 501(c)(3). The gift stays invested.</p>
+            </div>
+          </li>
+          <li>
+            <span class="flow-num">3</span>
+            <div>
+              <p class="step-title">A yearly payout</p>
+              <p>AUB’s published rule is 4%.</p>
+              <a class="cite" href="https://boldly.aub.edu.lb/faq/" target="_blank" rel="noopener noreferrer">Spending policy<span class="sr-only">, AUB Boldly FAQ, opens in a new tab</span></a>
+            </div>
+          </li>
+          <li>
+            <span class="flow-num">4</span>
+            <div>
+              <p class="step-title">Care at AUBMC</p>
+              <p>The hospital team pays for treatment or imaging.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="faq">
+          <details>
+            <summary>Is my gift tax-deductible?</summary>
+            <p>AUB is a 501(c)(3) organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
+            <p>Non-US donors: this page makes no deductibility claim outside the US.</p>
+          </details>
+          <details>
+            <summary>Who decides which patients get help?</summary>
+            <p>AUBMC social services and the medical team. Not the founder, and not the donor.</p>
+          </details>
+          <details>
+            <summary>How do I know it reaches patients?</summary>
+            <p>The fund reports to donors. AUB files a Form 990. <a href="https://projects.propublica.org/nonprofits/organizations/135596846" target="_blank" rel="noopener noreferrer">ProPublica Nonprofit Explorer<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>This page does not claim a percentage of gifts reaching patients.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="give" class="wrap" aria-labelledby="give-title">
+        <h2 id="give-title">Give</h2>
+        <p class="lede">You pay on AUB’s site. These amounts are only a reminder for that form.</p>
+        <fieldset class="segment">
+          <legend class="sr-only">Gift frequency</legend>
+          <div class="segment-bar" role="radiogroup" aria-label="Gift frequency">
+            <label class="segment-opt"><input type="radio" name="freq" value="monthly" checked /><span>Monthly</span></label>
+            <label class="segment-opt"><input type="radio" name="freq" value="onetime" /><span>One-time</span></label>
+          </div>
+        </fieldset>
+        <div id="amounts-monthly" class="chips">
+          <p class="chip-label" id="monthly-amounts-label">Monthly amount</p>
+          <div class="chip-row" role="radiogroup" aria-labelledby="monthly-amounts-label">
+            <label class="chip"><input type="radio" name="amt-monthly" value="50" checked /><span>$50</span></label>
+            <label class="chip"><input type="radio" name="amt-monthly" value="150" /><span>$150</span></label>
+            <label class="chip"><input type="radio" name="amt-monthly" value="500" /><span>$500</span></label>
+          </div>
+        </div>
+        <div id="amounts-onetime" class="chips" hidden>
+          <p class="chip-label" id="onetime-amounts-label">One-time amount</p>
+          <div class="chip-row" role="radiogroup" aria-labelledby="onetime-amounts-label">
+            <label class="chip"><input type="radio" name="amt-onetime" value="250" checked /><span>$250</span></label>
+            <label class="chip"><input type="radio" name="amt-onetime" value="1000" /><span>$1,000</span></label>
+            <label class="chip"><input type="radio" name="amt-onetime" value="5000" /><span>$5,000</span></label>
+            <label class="chip"><input type="radio" name="amt-onetime" value="10000" /><span>$10,000</span></label>
+            <label class="chip"><input type="radio" name="amt-onetime" value="other" /><span>Other</span></label>
+          </div>
+          <div id="other-wrap" class="other-wrap" hidden>
+            <label for="other-amount">Other amount (USD)</label>
+            <input id="other-amount" name="other-amount" type="number" min="1" step="1" inputmode="numeric" />
+          </div>
+        </div>
+        <a class="btn btn-primary btn-block" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give on AUB’s site<span class="sr-only">, opens in a new tab</span></a>
+        <p class="give-hint">Designation: WICHE Oncology Endowed Fund</p>
+        <details class="fold">
+          <summary>Other ways to give</summary>
+          <p>Checks payable to AUB, memo WICHE Oncology Endowed Fund. Mail them to Office of Development, American University of Beirut, 3 Dag Hammarskjold Plaza, 8th Floor, New York, NY 10017.</p>
+          <p>For stock, a donor-advised fund, or crypto, write to <a href="mailto:advancement@aub.edu.lb">advancement@aub.edu.lb</a>.</p>
+          <p>You can name this fund in a will, or give in someone’s honor. Ask Advancement for the wording. This is not legal advice.</p>
+          <p>Employer match lookup is not on this page yet. If your employer matches gifts to a US 501(c)(3), give on AUB’s site and send them the receipt.</p>
+        </details>
+      </section>
+
+      <section id="share" class="wrap" aria-labelledby="share-title">
+        <h2 id="share-title">Share</h2>
+        <p class="lede">Send a note on WhatsApp, or copy the link.</p>
+        <div class="share-primary">
+          <a class="btn btn-share" id="share-wa" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <button type="button" class="btn btn-outline" id="share-copy">Copy link</button>
+        </div>
+        <ul class="share-more">
+          <li><a class="share-link" id="share-li" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a class="share-link" id="share-x" href="#" target="_blank" rel="noopener noreferrer">X</a></li>
+          <li><button type="button" class="share-link" id="share-ig">Instagram</button></li>
+        </ul>
+        <p class="toast" id="share-toast" role="status" aria-live="polite"></p>
+        <details id="ways" class="fold">
+          <summary>Ask a friend this October</summary>
+          <p class="ask-preview" id="ask-preview">This October I'm asking friends to give to the WICHE Oncology Endowed Fund at AUBMC, for cancer patients in Lebanon. Breast cancer is the most common cancer in Lebanon. Gifts go to AUB's US 501(c)(3).</p>
+          <button type="button" class="btn btn-outline" id="ask-copy">Copy note</button>
+          <p class="toast" id="ask-toast" role="status" aria-live="polite"></p>
+        </details>
+      </section>
+    </main>
+
+    <!--
+      Case card template — fill only after written patient + AUBMC consent.
+      Do not invent names, quotes, costs, or status. Do not add photos.
+      Empty slots stay off the page until then.
+    -->
+
+    <footer class="site-foot wrap">
+      <!-- Founder note: replace only after Randa Armoush supplies her own words. Do not draft it. -->
+      <p class="note-hold">A note from the founder, Randa Armoush, is coming soon.</p>
+      <ul class="fine">
+        <li>WICHE Oncology Endowed Fund</li>
+        <li>American University of Beirut, US 501(c)(3)</li>
+        <li class="ein-item"><span class="ein">EIN 13-5596846</span><span class="hint">Pending Advancement confirmation for receipts.</span></li>
+        <li><a href="https://projects.propublica.org/nonprofits/organizations/135596846" target="_blank" rel="noopener noreferrer">Form 990<span class="sr-only"> on ProPublica, opens in a new tab</span></a></li>
+        <li><a href="https://aub.edu.lb/advancement/Pages/ContributorsReport.aspx" target="_blank" rel="noopener noreferrer">Contributors reports<span class="sr-only">, opens in a new tab</span></a></li>
+        <li><a href="mailto:advancement@aub.edu.lb">advancement@aub.edu.lb</a></li>
+      </ul>
+      <p class="tax">AUB is a 501(c)(3) organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
+      <p class="foot-note">Not the Cancer Support Fund or the Lebanese Breast Cancer Foundation. No logo, and no patient photos, until those are cleared.</p>
+    </footer>
+  </body>
+</html>
