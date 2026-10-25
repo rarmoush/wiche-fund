@@ -116,6 +116,12 @@
       .stat-strip p:not(.num) { margin: 0.3rem 0 0.15rem; font-size: 0.875rem; line-height: 1.3; color: var(--muted); }
       .src { font-size: 0.75rem; }
       .nowrap { white-space: nowrap; }
+      .stat-strip .delta { margin: 0.15rem 0 0.2rem; font-size: 0.875rem; font-weight: 650; color: var(--rose); }
+      .why { margin: 1.75rem 0 2rem; padding: 1.1rem 1.2rem; border-left: 3px solid var(--rose); background: var(--wash); border-radius: 0 10px 10px 0; }
+      .why h3 { margin: 0 0 0.5rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; }
+      .why p { margin: 0 0 0.6rem; max-width: 60ch; }
+      .why .why-note { font-size: 0.875rem; color: var(--muted); }
+      .why .why-src { margin: 0; }
       .stat-strip .src { display: inline-block; white-space: nowrap; line-height: 1.15; }
       .chart { margin: 1.35rem 0 0; }
       p.src { max-width: 62ch; margin: 0.45rem 0 0; }
@@ -214,6 +220,7 @@
           <li>
             <p class="num">3,754</p>
             <p>New breast cancer cases in 2024</p>
+            <p class="delta">+67% since 2012</p>
             <a class="src" href="https://www.moph.gov.lb/userfiles/files/Esu_data/Esu_ncr/BF2024.HTM" target="_blank" rel="noopener noreferrer">MoPH registry<span class="sr-only">, Ministry of Public Health, 2024 table of cases in women, opens in a new tab</span></a>
           </li>
           <li>
@@ -223,7 +230,7 @@
           </li>
           <li>
             <p class="num">38.7%</p>
-            <p>Of new cancers in women</p>
+            <p>Of new cancers in women, about 2 in 5</p>
             <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">GLOBOCAN 2024<span class="sr-only">, IARC fact sheet (PDF), opens in a new tab</span></a>
           </li>
           <li>
@@ -232,6 +239,12 @@
             <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">GLOBOCAN 2024<span class="sr-only">, IARC fact sheet, both sexes, deaths from the disease, opens in a new tab</span></a>
           </li>
         </ul>
+        <aside class="why" aria-labelledby="why-title">
+          <h3 id="why-title">Why cost matters</h3>
+          <p>In a 2024–25 study of cancer patients in Lebanon, more than half (52.5%) waited over two weeks to start treatment, with cost among the main reasons. Patients without insurance were more likely to receive incomplete treatment.</p>
+          <p class="why-note">In the same study (244 patients, 5 Beirut hospitals, not a national figure), 57% had no medical insurance.</p>
+          <p class="why-src"><a class="cite" href="https://www.cureus.com/articles/523742-cancer-care-delivery-and-financial-barriers-among-patients-in-lebanon-a-descriptive-multicenter-cross-sectional-study" target="_blank" rel="noopener noreferrer">Cureus 2025 multicenter study<span class="sr-only">, opens in a new tab</span></a> · <a class="cite" href="https://doi.org/10.3390/curroncol33080478" target="_blank" rel="noopener noreferrer">Current Oncology<span class="sr-only">, opens in a new tab</span></a></p>
+        </aside>
         <figure class="chart">
           <figcaption>Cases in women, national registry</figcaption>
           <ol>
