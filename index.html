@@ -4,21 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>WICHE Cancer Fund</title>
-    <meta name="description" content="Breast cancer care at AUBMC, all year. In July 2026 the WICHE Cancer Fund helped three Lebanese women with breast cancer get treatment." />
+    <meta name="description" content="Breast cancer care at AUBMC, all year. The WICHE Cancer Fund helps AUBMC patients get the cancer treatment they can't afford." />
     <meta name="theme-color" content="#441f41" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon-180.png" sizes="180x180" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rarmoush.github.io/wiche-fund/" />
     <meta property="og:title" content="WICHE Cancer Fund" />
-    <meta property="og:description" content="Breast cancer care at AUBMC, all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment." />
+    <meta property="og:description" content="Breast cancer care at AUBMC, all year. The WICHE Cancer Fund helps AUBMC patients get the cancer treatment they can't afford." />
     <meta property="og:image" content="https://rarmoush.github.io/wiche-fund/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="A geometric pink ribbon: Breast cancer care at AUBMC, all year. WICHE Cancer Fund. No photographs of people." />
+    <meta property="og:image:alt" content="WICHE Cancer Fund logo, a serif W formed from a ribbon: Breast cancer care at AUBMC, all year. WICHE Cancer Fund. No photographs of people." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="WICHE Cancer Fund" />
-    <meta name="twitter:description" content="Breast cancer care at AUBMC, all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment." />
+    <meta name="twitter:description" content="Breast cancer care at AUBMC, all year. The WICHE Cancer Fund helps AUBMC patients get the cancer treatment they can't afford." />
     <meta name="twitter:image" content="https://rarmoush.github.io/wiche-fund/og-image.png" />
     <style>
       :root {
@@ -64,11 +65,6 @@
       }
       .skip:focus { top: 0.75rem; color: var(--cream); }
       .wrap { width: min(100%, var(--page)); margin-inline: auto; padding-inline: 1.25rem; }
-      .ribbon-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
-      .ribbon {
-        display: block; width: auto; height: 22px; aspect-ratio: 100 / 140;
-        color: var(--rose); fill: none; stroke: currentColor; flex: 0 0 auto;
-      }
       .btn {
         display: inline-flex; align-items: center; justify-content: center;
         min-height: 48px; padding: 0.5rem 1.1rem; border-radius: 999px;
@@ -82,6 +78,9 @@
       .btn-share { background: var(--wa); border-color: var(--wa); color: #fff; }
       .btn-share:hover { background: #0c6434; border-color: #0c6434; color: #fff; }
       .btn-block { width: 100%; margin-top: 0.35rem; }
+      .brand { margin: 0 0 1.5rem; margin-left: -1rem; }
+      .brand img { display: block; height: 92px; max-width: 100%; width: auto; }
+      @media (min-width: 720px) { .brand img { height: 120px; } }
       .hero { padding-block: 2.75rem 2rem; }
       .kicker {
         display: flex; align-items: center; gap: 0.45rem;
@@ -127,7 +126,7 @@
       .bar-fill { display: block; height: 100%; background: #c9b3c0; }
       .bar-fill.is-breast { background: var(--rose); }
       .more, .fold { margin-top: 1.35rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-      .faq { margin-top: 0.5rem; }
+      .faq { margin-top: 1.35rem; }
       summary { cursor: pointer; padding: 0.75rem 0; min-height: 44px; font-weight: 650; }
       .more summary { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; }
       .more-body p, .faq p, .fold p { max-width: 62ch; margin: 0 0 0.8rem; }
@@ -145,6 +144,7 @@
       }
       .step-title { margin: 0.1rem 0; font-weight: 650; }
       .flow-steps p { margin: 0; color: var(--muted); }
+      .fair { max-width: 42ch; margin: 1.25rem 0 0; }
       .flow-steps .cite { display: inline-block; margin-top: 0.2rem; }
       .faq details { border-top: 1px solid var(--line); }
       .faq details:last-child { border-bottom: 1px solid var(--line); }
@@ -168,7 +168,9 @@
         border-left: 3px solid var(--rose); background: var(--wash);
       }
       .site-foot { padding-block: 2rem 2.5rem; border-top: 1px solid var(--line); }
-      .note-hold { margin: 0 0 0.9rem; font-family: var(--serif); font-style: italic; }
+      .founder { margin: 0 0 1.1rem; }
+      .founder p { margin: 0; max-width: 42ch; font-family: var(--serif); font-size: 1.125rem; line-height: 1.45; }
+      .founder figcaption { margin-top: 0.7rem; font-size: 0.875rem; font-weight: 650; color: var(--plum); }
       .fine { display: flex; flex-wrap: wrap; gap: 0.35rem 1.15rem; margin: 0 0 1rem; padding: 0; list-style: none; }
       .fine a { font-weight: 650; }
       .ein-item { flex-basis: 100%; }
@@ -176,7 +178,7 @@
       .hint { display: block; margin-top: 0.1rem; font-size: 0.8125rem; color: var(--muted); font-weight: 400; }
       .tax, .foot-note { max-width: 62ch; margin: 0.7rem 0 0; font-size: 0.9375rem; color: var(--muted); }
       @media (min-width: 700px) {
-        .stat-strip { grid-template-columns: repeat(3, 1fr); }
+        .stat-strip { grid-template-columns: repeat(2, 1fr); }
       }
       @media print {
         .skip, #share { display: none !important; }
@@ -188,24 +190,14 @@
   </head>
   <body class="breast-focus">
     <!-- MATCH: add only once a named donor confirms amount and deadline in writing. Do not publish a match before then. -->
-    <svg class="ribbon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <symbol id="ribbon-mark" viewBox="0 0 100 140">
-        <path d="M28 132 L50 80 C62 55 76 38 67 21 C60 7 40 7 33 21 C24 38 38 55 50 80 L72 132" fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
-      </symbol>
-    </svg>
     <a class="skip" href="#main">Skip to content</a>
 
     <header class="hero">
       <div class="wrap">
-        <p class="kicker">
-          <svg class="ribbon" viewBox="0 0 100 140" aria-hidden="true" focusable="false">
-            <use href="#ribbon-mark"></use>
-          </svg>
-          <span>WICHE Cancer Fund</span>
-        </p>
+        <p class="brand"><img src="wiche-horizontal.svg" width="826" height="244" alt="WICHE Cancer Fund" /></p>
         <h1>So treatment can continue.</h1>
         <p class="subhead">Breast cancer care at AUBMC, all year.</p>
-        <p class="proof">In July 2026 the fund helped three Lebanese women with breast cancer get treatment.</p>
+        <p class="proof">We help AUBMC patients get the cancer treatment they can't afford.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give<span class="sr-only">. Opens in a new tab.</span></a>
           <a class="btn btn-outline" href="#how">See where it goes</a>
@@ -233,6 +225,11 @@
             <p class="num">38.7%</p>
             <p>Of new cancers in women</p>
             <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">GLOBOCAN 2024<span class="sr-only">, IARC fact sheet (PDF), opens in a new tab</span></a>
+          </li>
+          <li>
+            <p class="num">978</p>
+            <p>Breast cancer deaths in 2024, both sexes</p>
+            <a class="src" href="https://gco.iarc.who.int/media/globocan/factsheets/populations/422-lebanon-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">GLOBOCAN 2024<span class="sr-only">, IARC fact sheet, both sexes, deaths from the disease, opens in a new tab</span></a>
           </li>
         </ul>
         <figure class="chart">
@@ -329,7 +326,7 @@
 
       <section id="how" class="wrap" aria-labelledby="how-title">
         <h2 id="how-title">Where the money goes</h2>
-        <p class="lede">You give to AUB. AUBMC decides who is helped.</p>
+        <p class="lede">You give to AUB. The hospital reviews who is helped.</p>
         <ol class="flow-steps">
           <li>
             <span class="flow-num">1</span>
@@ -357,10 +354,12 @@
             <span class="flow-num">4</span>
             <div>
               <p class="step-title">Care at AUBMC</p>
-              <p>The hospital team pays for treatment or imaging.</p>
+              <p>Help is for AUBMC (AUH) patients. The hospital screens each patient and thoroughly reviews them in its patient financial assessment before help is approved.</p>
             </div>
           </li>
         </ol>
+        <!-- [REQUIRES APPROVAL: AUB Advancement] Non-discrimination line. Confirm it matches AUBMC policy before it stays public. -->
+        <p class="fair">Help is given without discrimination: any eligible AUBMC patient, whatever their religion, sect, nationality, background, or gender.</p>
         <div class="faq">
           <details>
             <summary>Is my gift tax-deductible?</summary>
@@ -369,7 +368,7 @@
           </details>
           <details>
             <summary>Who decides which patients get help?</summary>
-            <p>AUBMC social services and the medical team. Not the founder, and not the donor.</p>
+            <p>AUBMC’s patient financial assessment. Each patient is screened and thoroughly reviewed before help is approved. Not the founder, and not the donor.</p>
           </details>
           <details>
             <summary>How do I know it reaches patients?</summary>
@@ -412,7 +411,7 @@
         <p class="toast" id="share-toast" role="status" aria-live="polite"></p>
         <details id="ways" class="fold">
           <summary>Ask a friend</summary>
-          <p class="ask-preview" id="ask-preview">I'm asking friends to give to the WICHE Cancer Fund at AUBMC, for breast cancer care all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment. Gifts go to AUB's US <span class="nowrap">501(c)(3)</span>.</p>
+          <p class="ask-preview" id="ask-preview">I'm asking friends to give to the WICHE Cancer Fund at AUBMC. We help patients get the cancer treatment they can't afford. Gifts go to AUB's US <span class="nowrap">501(c)(3)</span>.</p>
           <button type="button" class="btn btn-outline" id="ask-copy">Copy note</button>
           <p class="toast" id="ask-toast" role="status" aria-live="polite"></p>
         </details>
@@ -426,8 +425,11 @@
     -->
 
     <footer class="site-foot wrap">
-      <!-- Founder note: replace only after Randa Armoush supplies her own words. Do not draft it. -->
-      <p class="note-hold">A note from the founder, Randa Armoush, is coming soon.</p>
+      <!-- Founder note written from points Randa Armoush supplied. Replace only if she sends different wording. -->
+      <figure class="founder">
+        <p>As a breast cancer survivor, I know how much it matters to be able to afford treatment. Effective medicines exist today, yet for many Lebanese families the price decides who gets them. In 2023, I started the WICHE Cancer Fund so that cost never decides who is treated, and fewer patients are lost to a disease we know how to fight. Cancer is hard enough. Cost should never be part of it. Share this, and stand with us.</p>
+        <figcaption>Randa Armoush, Founder</figcaption>
+      </figure>
       <ul class="fine">
         <li>WICHE Cancer Fund</li>
         <li>American University of Beirut, US <span class="nowrap">501(c)(3)</span></li>
@@ -437,7 +439,7 @@
         <li><a href="mailto:advancement@aub.edu.lb">advancement@aub.edu.lb</a></li>
       </ul>
       <p class="tax">AUB is a <span class="nowrap">501(c)(3)</span> organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
-      <p class="foot-note">Not the Cancer Support Fund or the Lebanese Breast Cancer Foundation. No logo, and no patient photos, until those are cleared.</p>
+      <p class="foot-note">Not the Cancer Support Fund or the Lebanese Breast Cancer Foundation. No patient photos or stories are shown without written consent.</p>
     </footer>
   </body>
 </html>

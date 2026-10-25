@@ -10,10 +10,10 @@
     wa: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund. In 2024 Lebanon’s registry recorded 3,754 new breast cancer cases in women. Gifts go to AUB's US 501(c)(3). ",
     ig: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund. In 2024 Lebanon’s registry recorded 3,754 new breast cancer cases in women. Gifts go to AUB's US 501(c)(3). ",
     x: "WICHE Cancer Fund: breast cancer care at AUBMC, all year. 3,754 new cases in women in 2024, Lebanon’s national registry. ",
-    li: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund. Lebanon’s registry recorded 3,754 new breast cancer cases in women in 2024, up from 2,252 in 2012. GLOBOCAN 2024: 38.7% of new cancers in women. In July 2026 the fund helped three Lebanese women with breast cancer get treatment. Gifts go to AUB's US 501(c)(3). "
+    li: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund helps patients get the cancer treatment they can't afford. Lebanon’s registry recorded 3,754 new breast cancer cases in women in 2024, up from 2,252 in 2012. GLOBOCAN 2024: 978 breast cancer deaths, and 38.7% of new cancers in women. Gifts go to AUB's US 501(c)(3). "
   };
 
-  var ASK_FRIENDS = "I'm asking friends to give to the WICHE Cancer Fund at AUBMC, for breast cancer care all year. In July 2026 the fund helped three Lebanese women with breast cancer get treatment. Gifts go to AUB's US 501(c)(3). ";
+  var ASK_FRIENDS = "I'm asking friends to give to the WICHE Cancer Fund at AUBMC. We help patients get the cancer treatment they can't afford. Gifts go to AUB's US 501(c)(3). ";
 
   document.body.classList.toggle("breast-focus", BREAST_FOCUS);
 
