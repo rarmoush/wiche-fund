@@ -179,6 +179,10 @@
       .hope .hope-title { font-weight: 650; color: var(--plum); }
       .hope .hope-quote { font-family: var(--serif); font-style: italic; }
       .hope .hope-quote span { font-family: inherit; font-style: normal; font-size: 0.75rem; color: var(--muted); margin-left: 0.3rem; }
+      .tribute { margin: 1.5rem 0 1.25rem; padding: 1.1rem 1.2rem; background: var(--wash); border-left: 3px solid var(--rose); border-radius: 0 10px 10px 0; }
+      .tribute h3 { margin: 0 0 0.4rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; color: var(--ink); }
+      .tribute p { margin: 0 0 0.85rem; max-width: 42ch; }
+      .tribute .give-hint { margin: 0.7rem 0 0; }
       .founder { margin: 0 0 1.1rem; }
       .founder p { margin: 0; max-width: 42ch; font-family: var(--serif); font-size: 1.125rem; line-height: 1.45; }
       .founder figcaption { margin-top: 0.7rem; font-size: 0.875rem; font-weight: 650; color: var(--plum); }
@@ -406,7 +410,13 @@
         </div>
         <p class="give-hint">Designation: WICHE Oncology Endowed Fund</p>
         <p class="give-hint">WICHE Cancer Fund is the same fund.</p>
-        <p class="dedicate">In honor of, or in memory of, someone. You can dedicate your gift when you give on AUB’s page.</p>
+        <!-- [REQUIRES APPROVAL: AUB Advancement] tribute field/acknowledgement flow -->
+        <div class="tribute" aria-labelledby="tribute-title">
+          <h3 id="tribute-title">Give in honour of someone</h3>
+          <p>A gift can mark a birthday, a recovery, or the memory of someone you love.</p>
+          <a class="btn btn-outline" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give in their honour<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
+          <p class="give-hint">Add their name in the gift notes if the form allows.</p>
+        </div>
         <details class="fold">
           <summary>Other ways to give</summary>
           <p>Checks payable to AUB. Write the designation above on the memo line. Mail them to Office of Development, American University of Beirut, 3 Dag Hammarskjold Plaza, 8th Floor, New York, NY 10017.</p>
