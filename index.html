@@ -183,6 +183,13 @@
       .tribute h3 { margin: 0 0 0.4rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; color: var(--ink); }
       .tribute p { margin: 0 0 0.85rem; max-width: 42ch; }
       .tribute .give-hint { margin: 0.7rem 0 0; }
+      .together { margin: 0 0 1.6rem; }
+      .together h3 { margin: 0 0 0.7rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; }
+      .together figure { margin: 0; }
+      .together-grid { display: grid; gap: 0.75rem; }
+      .together-grid img { display: block; width: 100%; height: auto; border-radius: 12px; }
+      .together figcaption { margin-top: 0.5rem; font-size: 0.875rem; color: var(--muted); }
+      @media (min-width: 720px) { .together-grid { grid-template-columns: 16fr 9fr; } }
       .founder { margin: 0 0 1.1rem; }
       .founder p { margin: 0; max-width: 42ch; font-family: var(--serif); font-size: 1.125rem; line-height: 1.45; }
       .founder figcaption { margin-top: 0.7rem; font-size: 0.875rem; font-weight: 650; color: var(--plum); }
@@ -471,6 +478,16 @@
         <p>An urgent appeal from Randa Armoush for Lebanese cancer patients in desperate need of medication they could not get.</p>
         <a class="cite" href="https://www.linkedin.com/posts/randa-armoush-80555a33_cancer-cant-wait-organized-by-randa-armoush-activity-6846731083015360512-K9Kr" target="_blank" rel="noopener noreferrer">Read Randa&rsquo;s post<span class="sr-only"> on LinkedIn, opens in a new tab</span></a>
       </aside>
+      <section class="together" aria-labelledby="together-title">
+        <h3 id="together-title">Standing together</h3>
+        <figure>
+          <div class="together-grid">
+            <img src="panel-1.jpg" width="1400" height="1050" loading="lazy" decoding="async" alt="Six panelists seated on a stage in front of a large screen reading PINKtober Panel, NAS Dubai, with a pink ribbon." />
+            <img src="panel-2.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="A group standing together on stage beside a tall pink balloon ribbon." />
+          </div>
+          <figcaption>Breast cancer awareness panel, NAS Dubai.</figcaption>
+        </figure>
+      </section>
       <ul class="fine">
         <li>WICHE Cancer Fund</li>
         <li>American University of Beirut, US <span class="nowrap">501(c)(3)</span></li>
