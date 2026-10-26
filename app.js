@@ -7,7 +7,7 @@
   var CAMPAIGN = "wiche_share";
 
   var TEXT = {
-    wa: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund. In 2024 Lebanon’s registry recorded 3,754 new breast cancer cases in women. Gifts go to AUB's US 501(c)(3). ",
+    wa: "Cancer can’t wait! In 2024 Lebanon’s registry recorded 3,754 new breast cancer cases in women. The WICHE Cancer Fund helps AUBMC patients keep their treatment going. Gifts go to AUB's US 501(c)(3). ",
     ig: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund. In 2024 Lebanon’s registry recorded 3,754 new breast cancer cases in women. Gifts go to AUB's US 501(c)(3). ",
     x: "WICHE Cancer Fund: breast cancer care at AUBMC, all year. 3,754 new cases in women in 2024, Lebanon’s national registry. ",
     li: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund helps patients get the cancer treatment they can't afford. Lebanon’s registry recorded 3,754 new breast cancer cases in women in 2024, up from 2,252 in 2012. GLOBOCAN 2024: 978 breast cancer deaths, and 38.7% of new cancers in women. Gifts go to AUB's US 501(c)(3). "
