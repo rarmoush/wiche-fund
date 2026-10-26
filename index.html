@@ -77,6 +77,8 @@
       .btn-outline:hover { background: var(--wash); }
       .btn-share { background: var(--wa); border-color: var(--wa); color: #fff; }
       .btn-share:hover { background: #0c6434; border-color: #0c6434; color: #fff; }
+      .btn-soon { background: var(--wash); border-color: transparent; color: var(--muted); font-weight: 600; cursor: default; }
+      .btn-soon + .btn-soon { display: none; }
       .btn-block { width: 100%; margin-top: 0.35rem; }
       .brand { margin: 0 0 1.5rem; margin-left: -1rem; }
       .brand img { display: block; height: 92px; max-width: 100%; width: auto; }
@@ -221,7 +223,7 @@
         <p class="subhead">Breast cancer care at AUBMC, all year.</p>
         <p class="proof">We help AUBMC patients get the cancer treatment they can't afford.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give<span class="sr-only">. Opens in a new tab.</span></a>
+          <span class="btn btn-soon" data-give data-label="Give" aria-disabled="true">Online giving link coming soon</span>
           <a class="btn btn-outline" href="#how">See where it goes</a>
         </div>
       </div>
@@ -412,8 +414,8 @@
         <h2 id="give-title">Give</h2>
         <p class="lede">Monthly or once. You finish the gift on AUB’s site.</p>
         <div class="hero-actions give-actions">
-          <a class="btn btn-primary" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give monthly<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
-          <a class="btn btn-outline" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give once<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
+          <span class="btn btn-soon" data-give data-label="Give monthly" aria-disabled="true">Online giving link coming soon</span>
+          <span class="btn btn-soon" data-give data-label="Give once" aria-disabled="true">Online giving link coming soon</span>
         </div>
         <p class="give-hint">Designation: WICHE Oncology Endowed Fund</p>
         <p class="give-hint">WICHE Cancer Fund is the same fund.</p>
@@ -421,13 +423,13 @@
         <div class="tribute" aria-labelledby="tribute-title">
           <h3 id="tribute-title">Give in honour of someone</h3>
           <p>A gift can mark a birthday, a recovery, or the memory of someone you love.</p>
-          <a class="btn btn-outline" href="https://giving.aub.edu.lb/" target="_blank" rel="noopener noreferrer">Give in their honour<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
+          <span class="btn btn-soon" data-give data-label="Give in their honour" aria-disabled="true">Online giving link coming soon</span>
           <p class="give-hint">Add their name in the gift notes if the form allows.</p>
         </div>
         <details class="fold">
           <summary>Other ways to give</summary>
           <p>Checks payable to AUB. Write the designation above on the memo line. Mail them to Office of Development, American University of Beirut, 3 Dag Hammarskjold Plaza, 8th Floor, New York, NY 10017.</p>
-          <p>For stock, a donor-advised fund, or crypto, write to <a href="mailto:advancement@aub.edu.lb">advancement@aub.edu.lb</a>.</p>
+          <p>For stock, a donor-advised fund, or crypto, write to advancement@aub.edu.lb.</p>
           <p>Employer match lookup is not on this page yet. If your employer matches gifts to a US <span class="nowrap">501(c)(3)</span>, give on AUB’s site and send them the receipt.</p>
         </details>
       </section>
@@ -499,5 +501,19 @@
       <p class="tax">AUB is a <span class="nowrap">501(c)(3)</span> organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
       <p class="foot-note">Not the Cancer Support Fund or the Lebanese Breast Cancer Foundation. No patient photos or stories are shown without written consent.</p>
     </footer>
+    <!-- GIVE_URL: paste link here. Set GIVE_URL below and every "Online giving link coming soon" note becomes a Give button. -->
+    <script>
+      (function () {
+        var GIVE_URL = "";
+        if (!GIVE_URL) return;
+        document.querySelectorAll("[data-give]").forEach(function (el) {
+          var a = document.createElement("a");
+          a.className = el.className.replace("btn-soon", el === document.querySelector("[data-give]") ? "btn-primary" : "btn-outline");
+          a.href = GIVE_URL; a.target = "_blank"; a.rel = "noopener noreferrer";
+          a.textContent = el.getAttribute("data-label");
+          el.replaceWith(a);
+        });
+      })();
+    </script>
   </body>
 </html>
