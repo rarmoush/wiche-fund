@@ -77,6 +77,8 @@
       .btn-outline:hover { background: var(--wash); }
       .btn-share { background: var(--wa); border-color: var(--wa); color: #fff; }
       .btn-share:hover { background: #0c6434; border-color: #0c6434; color: #fff; }
+      .btn-cta { min-height: 52px; padding-inline: 2.1rem; font-size: 1.0625rem; }
+      .btn-cta-2 { min-height: 48px; font-size: 0.9375rem; }
       .btn-soon { background: var(--wash); border-color: transparent; color: var(--muted); font-weight: 600; cursor: default; }
       .btn-soon + .btn-soon { display: none; }
       .tribute .btn-soon { background: var(--cream); }
@@ -225,8 +227,9 @@
         <p class="subhead">Breast cancer care at AUBMC, all year.</p>
         <p class="proof">We help AUBMC patients get the cancer treatment they can't afford.</p>
         <div class="hero-actions">
-          <span class="btn btn-soon" data-give data-label="Give" aria-disabled="true">Online giving link coming soon</span>
-          <a class="btn btn-outline" href="#how">See where it goes</a>
+          <a class="btn btn-primary btn-cta" href="#give" data-give-hero>Give</a>
+          <a class="btn btn-outline btn-cta-2" href="#share">Share</a>
+          <a class="btn btn-outline btn-cta-2" href="#how">See where it goes</a>
         </div>
       </div>
     </header>
@@ -509,6 +512,8 @@
       (function () {
         var GIVE_URL = "";
         if (!GIVE_URL) return;
+        var hero = document.querySelector("[data-give-hero]");
+        if (hero) { hero.href = GIVE_URL; hero.target = "_blank"; hero.rel = "noopener noreferrer"; }
         document.querySelectorAll("[data-give]").forEach(function (el) {
           var a = document.createElement("a");
           a.className = el.className.replace("btn-soon", el === document.querySelector("[data-give]") ? "btn-primary" : "btn-outline");
