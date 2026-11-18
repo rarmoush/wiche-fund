@@ -82,9 +82,6 @@
       .cta-note { margin: 0.6rem 0 0; font-size: 0.875rem; color: var(--muted); }
       .btn-cta { min-height: 52px; padding-inline: 1.6rem; font-size: 1.0625rem; }
       .btn-cta-2 { min-height: 48px; font-size: 0.9375rem; }
-      .btn-soon { background: var(--wash); border-color: transparent; color: var(--muted); font-weight: 600; cursor: default; }
-      .btn-soon + .btn-soon { display: none; }
-      .tribute .btn-soon { background: var(--cream); }
       .btn-block { width: 100%; margin-top: 0.35rem; }
       .brand { margin: 0 0 1.5rem; margin-left: -1rem; }
       .brand img { display: block; height: 92px; max-width: 100%; width: auto; }
@@ -231,7 +228,7 @@
         <p class="proof">We help AUBMC patients get the cancer treatment they can't afford.</p>
         <p class="cta-line">Treatment shouldn’t stop because of cost. You can keep it going.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-cta" href="#give" data-give-hero>Give hope</a>
+          <a class="btn btn-primary btn-cta" href="https://giving.aub.edu.lb/WICHE" target="_blank" rel="noopener noreferrer">Give hope<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
           <a class="btn btn-outline btn-cta-2" href="#share">Share</a>
           <a class="btn btn-outline btn-cta-2" href="#how">See where it goes</a>
         </div>
@@ -422,10 +419,10 @@
 
       <section id="give" class="wrap" aria-labelledby="give-title">
         <h2 id="give-title">Give</h2>
-        <p class="lede">Monthly or once. You finish the gift on AUB’s site.</p>
+        <p class="lede">Monthly or once. You finish the gift on AUB’s secure page.</p>
         <div class="hero-actions give-actions">
-          <span class="btn btn-soon" data-give data-label="Give monthly" aria-disabled="true">Online giving link coming soon</span>
-          <span class="btn btn-soon" data-give data-label="Give once" aria-disabled="true">Online giving link coming soon</span>
+          <a class="btn btn-primary" href="https://giving.aub.edu.lb/WICHE" target="_blank" rel="noopener noreferrer">Give monthly<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
+          <a class="btn btn-outline" href="https://giving.aub.edu.lb/WICHE" target="_blank" rel="noopener noreferrer">Give once<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
         </div>
         <p class="give-hint">Designation: WICHE Oncology Endowed Fund</p>
         <p class="give-hint">WICHE Cancer Fund is the same fund.</p>
@@ -433,7 +430,7 @@
         <div class="tribute" aria-labelledby="tribute-title">
           <h3 id="tribute-title">Give in honour of someone</h3>
           <p>A gift can mark a birthday, a recovery, or the memory of someone you love.</p>
-          <span class="btn btn-soon" data-give data-label="Give in their honour" aria-disabled="true">Online giving link coming soon</span>
+          <a class="btn btn-outline" href="https://giving.aub.edu.lb/WICHE" target="_blank" rel="noopener noreferrer">Give in their honour<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
           <p class="give-hint">Add their name in the gift notes if the form allows.</p>
         </div>
         <details class="fold">
@@ -512,21 +509,9 @@
       <p class="tax">AUB is a <span class="nowrap">501(c)(3)</span> organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
       <p class="foot-note">Not the Cancer Support Fund or the Lebanese Breast Cancer Foundation. No patient photos or stories are shown without written consent.</p>
     </footer>
-    <!-- GIVE_URL: paste link here. Set GIVE_URL below and every "Online giving link coming soon" note becomes a Give button. -->
+    <!-- GIVE_URL: https://giving.aub.edu.lb/WICHE  (also used in every Give button href below the hero and in the Give section) -->
     <script>
-      (function () {
-        var GIVE_URL = "";
-        if (!GIVE_URL) return;
-        var hero = document.querySelector("[data-give-hero]");
-        if (hero) { hero.href = GIVE_URL; hero.target = "_blank"; hero.rel = "noopener noreferrer"; }
-        document.querySelectorAll("[data-give]").forEach(function (el) {
-          var a = document.createElement("a");
-          a.className = el.className.replace("btn-soon", el === document.querySelector("[data-give]") ? "btn-primary" : "btn-outline");
-          a.href = GIVE_URL; a.target = "_blank"; a.rel = "noopener noreferrer";
-          a.textContent = el.getAttribute("data-label");
-          el.replaceWith(a);
-        });
-      })();
+      var GIVE_URL = "https://giving.aub.edu.lb/WICHE";
     </script>
   </body>
 </html>
