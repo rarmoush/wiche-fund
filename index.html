@@ -77,8 +77,8 @@
       .btn-outline:hover { background: var(--wash); }
       .btn-share { background: var(--wa); border-color: var(--wa); color: #fff; }
       .btn-share:hover { background: #0c6434; border-color: #0c6434; color: #fff; }
-      .cta-line { margin: 0.9rem 0 0; font-size: 1.1875rem; font-weight: 700; line-height: 1.35; color: var(--plum); max-width: 30ch; }
-      .cta-line + .hero-actions { margin-top: 1rem; }
+      .cta-line { margin: 0.7rem 0 0; font-size: 1.125rem; font-weight: 700; line-height: 1.35; color: var(--plum); max-width: 30ch; }
+      .cta-line + .hero-actions { margin-top: 0.85rem; }
       .cta-note { margin: 0.6rem 0 0; font-size: 0.875rem; color: var(--muted); }
       .btn-cta { min-height: 52px; padding-inline: 1.6rem; font-size: 1.0625rem; }
       .btn-cta-2 { min-height: 48px; font-size: 0.9375rem; }
@@ -86,7 +86,17 @@
       .brand { margin: 0 0 1.5rem; margin-left: -1rem; }
       .brand img { display: block; height: 92px; max-width: 100%; width: auto; }
       @media (min-width: 720px) { .brand img { height: 120px; } }
-      .hero { padding-block: 2.75rem 2rem; }
+      .hero { padding-block: 2rem 1.25rem; }
+      .who { max-width: 40ch; margin: 0.65rem 0 0; font-size: 1.0625rem; line-height: 1.4; }
+      .trust { background: var(--wash); border-block: 1px solid var(--line); padding-block: 0.8rem 0.9rem; }
+      .trust ul {
+        display: grid; gap: 0.5rem 1.2rem; margin: 0; padding: 0; list-style: none;
+        font-size: 0.8125rem; line-height: 1.35; color: var(--plum); font-weight: 650;
+      }
+      @media (min-width: 700px) { .trust ul { grid-template-columns: repeat(2, 1fr); } }
+      @media (min-width: 1100px) { .trust ul { grid-template-columns: repeat(4, 1fr); } }
+      .src-row { margin: 0.9rem 0 0; font-size: 0.8125rem; }
+      .through .founder { margin-top: 1.25rem; }
       .kicker {
         display: flex; align-items: center; gap: 0.45rem;
         margin: 0 0 0.85rem; font-size: 0.75rem; font-weight: 700;
@@ -97,7 +107,7 @@
         font-size: clamp(2.35rem, 7vw, 4rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.03em;
       }
       .subhead { max-width: 28ch; margin: 0.85rem 0 0; font-size: 1.125rem; line-height: 1.4; }
-      .proof { max-width: 36ch; margin: 0.85rem 0 0; }
+      .proof { max-width: 36ch; margin: 0.55rem 0 0; }
       .hero-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.5rem; }
       main section { padding-block: 2.5rem; }
       main section + section { border-top: 1px solid var(--line); }
@@ -224,7 +234,8 @@
       <div class="wrap">
         <p class="brand"><img src="wiche-horizontal.svg" width="826" height="244" alt="WICHE Cancer Fund" /></p>
         <h1>So treatment can continue.</h1>
-        <p class="subhead">Breast cancer care at AUBMC, all year.</p>
+        <!-- AUBMC is the hospital / teaching hospital of the American University of Beirut, serving patients since 1902. Sources: https://aubmc.org.lb/aboutus/Pages/why.aspx and https://aubmc.org.lb/Documents/press/6th_JCI_En.pdf -->
+        <p class="who">A named fund at AUBMC, the hospital of the American University of Beirut, that pays for cancer treatment patients can’t afford.</p>
         <p class="proof">We help AUBMC patients get the cancer treatment they can't afford.</p>
         <p class="cta-line">Treatment shouldn’t stop because of cost. You can keep it going.</p>
         <div class="hero-actions">
@@ -236,7 +247,46 @@
       </div>
     </header>
 
+    <section class="trust" aria-label="How gifts are held">
+      <div class="wrap">
+        <ul>
+          <li>Held by AUB, a US <span class="nowrap">501(c)(3)</span></li>
+          <li>Gifts go directly through AUB’s official giving page</li>
+          <li>Tax-deductible to the extent permitted by US law</li>
+          <!-- Since 1902: https://aubmc.org.lb/aboutus/Pages/why.aspx. JCI 6th reaccreditation, March 2024: https://aubmc.org.lb/Documents/press/6th_JCI_En.pdf -->
+          <li>AUBMC: serving patients since 1902, JCI accredited in 2024</li>
+        </ul>
+      </div>
+    </section>
+
     <main id="main">
+      <section id="aubmc" class="wrap" aria-labelledby="aubmc-title">
+        <h2 id="aubmc-title">About AUBMC</h2>
+        <!-- AUBMC is the teaching hospital of the Faculty of Medicine at AUB (established 1867); serving patients since 1902; more than 350 beds; NKBCI is the adult cancer institute; five accreditations JCI, Magnet, CAP, ACGME-I and JACIE. Source: https://aubmc.org.lb/aboutus/Pages/why.aspx -->
+        <p>AUBMC is the hospital of the American University of Beirut. It has cared for patients in Lebanon and the region since 1902, and is the teaching hospital for AUB’s Faculty of Medicine, established in 1867. It has more than 350 beds.</p>
+        <!-- NKBCI enrolls about 2,500 new cancer patients a year (average annual numbers). Source: https://sites.aub.edu.lb/aubmcacc/nkbci/nkbci-patient-care-services-2/ -->
+        <p>Adult cancer care is provided at the Naef K. Basile Cancer Institute, which enrolls about 2,500 new cancer patients a year.</p>
+        <!-- Five accreditations: https://aubmc.org.lb/aboutus/Pages/why.aspx and https://aubmc.org.lb/Documents/press/6th_JCI_En.pdf. JCI 6th reaccreditation, March 2024: same JCI PDF. Fourth Magnet recognition, 2024, first in MENA and second outside the US: https://www.aubmc.org.lb/Documents/press/2024/August/AUBMC-MAGNET-Recognition-EN.pdf -->
+        <p>The hospital holds five international accreditations: Joint Commission International (JCI), Magnet, the College of American Pathologists (CAP), ACGME-I, and JACIE. JCI reaccredited AUBMC in March 2024, its sixth such review. In 2024 AUBMC also received its fourth Magnet recognition: the first medical center in the MENA region, and the second outside the United States, to do so.</p>
+        <p class="src-row">
+          <a class="cite" href="https://aubmc.org.lb/aboutus/Pages/why.aspx" target="_blank" rel="noopener noreferrer">AUBMC<span class="sr-only">, opens in a new tab</span></a>
+          · <a class="cite" href="https://aubmc.org.lb/Documents/press/6th_JCI_En.pdf" target="_blank" rel="noopener noreferrer">JCI, March 2024 (PDF)<span class="sr-only">, opens in a new tab</span></a>
+          · <a class="cite" href="https://www.aubmc.org.lb/Documents/press/2024/August/AUBMC-MAGNET-Recognition-EN.pdf" target="_blank" rel="noopener noreferrer">Magnet, 2024 (PDF)<span class="sr-only">, opens in a new tab</span></a>
+          · <a class="cite" href="https://sites.aub.edu.lb/aubmcacc/nkbci/nkbci-patient-care-services-2/" target="_blank" rel="noopener noreferrer">NKBCI<span class="sr-only">, opens in a new tab</span></a>
+        </p>
+      </section>
+
+      <section id="through" class="wrap through" aria-labelledby="through-title">
+        <h2 id="through-title">Why give through this link</h2>
+        <p>Your gift goes straight to AUB’s official giving page for the WICHE Oncology Endowed Fund. This site does not take payments. Nothing passes through us.</p>
+        <p>AUB, a US <span class="nowrap">501(c)(3)</span>, holds the fund. The hospital decides who is helped.</p>
+        <!-- Founder note written from points Randa Armoush supplied. Replace only if she sends different wording. -->
+        <figure class="founder">
+          <p>As a breast cancer survivor, I know how much it matters to be able to afford treatment. Effective medicines exist today, yet for many Lebanese families the price decides who gets them. In 2023, I started the WICHE Cancer Fund so that cost never decides who is treated, and fewer patients are lost to a disease we know how to fight. Cancer is hard enough. Cost should never be part of it. Share this, and stand with us.</p>
+          <figcaption>Randa Armoush, Founder</figcaption>
+        </figure>
+      </section>
+
       <section id="lebanon" class="wrap" aria-labelledby="lebanon-title">
         <!-- PENDING: diagnosis categories for the 9 non-breast-cancer patients not yet supplied by AUBMC. Do not infer. -->
         <!-- [NEED: source] National Cancer Registry breast-cancer counts for 2013, 2014, 2017, and 2020 were not read from the primary tables. Do not fill those years in. -->
@@ -399,24 +449,31 @@
         </ol>
         <!-- [REQUIRES APPROVAL: AUB Advancement] Non-discrimination line. Confirm it matches AUBMC policy before it stays public. -->
         <p class="fair">Help is given without discrimination: any eligible AUBMC patient, whatever their religion, sect, nationality, background, or gender.</p>
-        <div class="faq">
-          <details>
-            <summary>Is my gift tax-deductible?</summary>
-            <p>AUB is a <span class="nowrap">501(c)(3)</span> organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
-            <p>Non-US donors: this page makes no deductibility claim outside the US.</p>
-          </details>
-          <details>
-            <summary>Who decides which patients get help?</summary>
-            <p>AUBMC’s patient financial assessment. Each patient is screened and thoroughly reviewed before help is approved. Not the founder, and not the donor.</p>
-          </details>
-          <details>
-            <summary>How do I know it reaches patients?</summary>
-            <p>The fund reports to donors. AUB files a Form 990. <a href="https://projects.propublica.org/nonprofits/organizations/135596846" target="_blank" rel="noopener noreferrer">ProPublica Nonprofit Explorer<span class="sr-only">, opens in a new tab</span></a></p>
-            <p>This page does not claim a percentage of gifts reaching patients.</p>
-          </details>
-        </div>
       </section>
 
+      <!-- [REQUIRES APPROVAL: AUB Advancement] Any AUBMC photo of the Hope Bell needs written approval before use. None used here. -->
+      <aside class="hope" aria-labelledby="hope-title">
+        <p id="hope-title" class="hope-title">Hope Bell, Naef K. Basile Cancer Institute, AUBMC</p>
+        <img class="hope-img" src="hope-bell.jpg" width="550" height="390" loading="lazy" decoding="async" alt="The Hope Bell plaque and bell mounted on a wooden ribbon at AUBMC." />
+        <p>A bell patients ring when they finish cancer treatment, set up in June 2020 at the Naef K. Basile Cancer Institute through Randa Armoush and Hadi Darwish, so other patients could also &ldquo;share the joy.&rdquo;</p>
+        <p class="hope-quote">&ldquo;He who is sick of pain, is blessed with hope.&rdquo; <span>Plaque quote</span></p>
+        <a class="cite" href="https://aubmc.org.lb/Pages/Ringing-the-Hope-Bell-to-Spread-Joy-and-Hope-to-Cancer-Patients.aspx" target="_blank" rel="noopener noreferrer">Read AUBMC&rsquo;s story<span class="sr-only">, opens in a new tab</span></a>
+      </aside>
+      <aside class="hope" aria-labelledby="wait-title">
+        <p id="wait-title" class="hope-title">Cancer can&rsquo;t wait!</p>
+        <p>An urgent appeal from Randa Armoush for Lebanese cancer patients in desperate need of medication they could not get.</p>
+        <a class="cite" href="https://www.linkedin.com/posts/randa-armoush-80555a33_cancer-cant-wait-organized-by-randa-armoush-activity-6846731083015360512-K9Kr" target="_blank" rel="noopener noreferrer">Read Randa&rsquo;s post<span class="sr-only"> on LinkedIn, opens in a new tab</span></a>
+      </aside>
+      <section class="together" aria-labelledby="together-title">
+        <h3 id="together-title">Standing together</h3>
+        <figure>
+          <div class="together-grid">
+            <img src="panel-1.jpg" width="1400" height="1050" loading="lazy" decoding="async" alt="Five panelists seated and a speaker standing on a stage in front of a large screen reading PINKtober Panel, NAS Dubai, with a pink ribbon." />
+            <img src="panel-2.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="A group standing together on stage beside a tall pink balloon ribbon." />
+          </div>
+          <figcaption>Breast cancer awareness panel, NAS Dubai.</figcaption>
+        </figure>
+      </section>
       <section id="give" class="wrap" aria-labelledby="give-title">
         <h2 id="give-title">Give</h2>
         <p class="lede">Monthly or once. You finish the gift on AUB’s secure page.</p>
@@ -461,6 +518,26 @@
           <p class="toast" id="ask-toast" role="status" aria-live="polite"></p>
         </details>
       </section>
+      <section id="faq" class="wrap" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Is my gift tax-deductible?</summary>
+            <p>AUB is a <span class="nowrap">501(c)(3)</span> organization registered in the US. Gifts are tax-deductible to the extent permitted by US law. This is not tax advice; consult your own advisor.</p>
+            <p>Non-US donors: this page makes no deductibility claim outside the US.</p>
+          </details>
+          <details>
+            <summary>Who decides which patients get help?</summary>
+            <p>AUBMC’s patient financial assessment. Each patient is screened and thoroughly reviewed before help is approved. Not the founder, and not the donor.</p>
+          </details>
+          <details>
+            <summary>How do I know it reaches patients?</summary>
+            <p>The fund reports to donors. AUB files a Form 990. <a href="https://projects.propublica.org/nonprofits/organizations/135596846" target="_blank" rel="noopener noreferrer">ProPublica Nonprofit Explorer<span class="sr-only">, opens in a new tab</span></a></p>
+            <p>This page does not claim a percentage of gifts reaching patients.</p>
+          </details>
+        </div>
+      </section>
+
     </main>
 
     <!--
@@ -470,34 +547,6 @@
     -->
 
     <footer class="site-foot wrap">
-      <!-- Founder note written from points Randa Armoush supplied. Replace only if she sends different wording. -->
-      <figure class="founder">
-        <p>As a breast cancer survivor, I know how much it matters to be able to afford treatment. Effective medicines exist today, yet for many Lebanese families the price decides who gets them. In 2023, I started the WICHE Cancer Fund so that cost never decides who is treated, and fewer patients are lost to a disease we know how to fight. Cancer is hard enough. Cost should never be part of it. Share this, and stand with us.</p>
-        <figcaption>Randa Armoush, Founder</figcaption>
-      </figure>
-      <!-- [REQUIRES APPROVAL: AUB Advancement] Any AUBMC photo of the Hope Bell needs written approval before use. None used here. -->
-      <aside class="hope" aria-labelledby="hope-title">
-        <p id="hope-title" class="hope-title">Hope Bell, Naef K. Basile Cancer Institute, AUBMC</p>
-        <img class="hope-img" src="hope-bell.jpg" width="550" height="390" loading="lazy" decoding="async" alt="The Hope Bell plaque and bell mounted on a wooden ribbon at AUBMC." />
-        <p>A bell patients ring when they finish cancer treatment, set up in June 2020 at the Naef K. Basile Cancer Institute through Randa Armoush and Hadi Darwish, so other patients could also &ldquo;share the joy.&rdquo;</p>
-        <p class="hope-quote">&ldquo;He who is sick of pain, is blessed with hope.&rdquo; <span>Plaque quote</span></p>
-        <a class="cite" href="https://aubmc.org.lb/Pages/Ringing-the-Hope-Bell-to-Spread-Joy-and-Hope-to-Cancer-Patients.aspx" target="_blank" rel="noopener noreferrer">Read AUBMC&rsquo;s story<span class="sr-only">, opens in a new tab</span></a>
-      </aside>
-      <aside class="hope" aria-labelledby="wait-title">
-        <p id="wait-title" class="hope-title">Cancer can&rsquo;t wait!</p>
-        <p>An urgent appeal from Randa Armoush for Lebanese cancer patients in desperate need of medication they could not get.</p>
-        <a class="cite" href="https://www.linkedin.com/posts/randa-armoush-80555a33_cancer-cant-wait-organized-by-randa-armoush-activity-6846731083015360512-K9Kr" target="_blank" rel="noopener noreferrer">Read Randa&rsquo;s post<span class="sr-only"> on LinkedIn, opens in a new tab</span></a>
-      </aside>
-      <section class="together" aria-labelledby="together-title">
-        <h3 id="together-title">Standing together</h3>
-        <figure>
-          <div class="together-grid">
-            <img src="panel-1.jpg" width="1400" height="1050" loading="lazy" decoding="async" alt="Five panelists seated and a speaker standing on a stage in front of a large screen reading PINKtober Panel, NAS Dubai, with a pink ribbon." />
-            <img src="panel-2.jpg" width="1200" height="1600" loading="lazy" decoding="async" alt="A group standing together on stage beside a tall pink balloon ribbon." />
-          </div>
-          <figcaption>Breast cancer awareness panel, NAS Dubai.</figcaption>
-        </figure>
-      </section>
       <ul class="fine">
         <li>WICHE Cancer Fund</li>
         <li>American University of Beirut, US <span class="nowrap">501(c)(3)</span></li>
