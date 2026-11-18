@@ -95,6 +95,10 @@
       }
       @media (min-width: 700px) { .trust ul { grid-template-columns: repeat(2, 1fr); } }
       @media (min-width: 1100px) { .trust ul { grid-template-columns: repeat(4, 1fr); } }
+      .pillars { display: grid; gap: 1.35rem; margin: 0; padding: 0; list-style: none; }
+      .pillars h3 { margin: 0 0 0.35rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; }
+      .pillars p { margin: 0; max-width: 42ch; }
+      @media (min-width: 900px) { .pillars { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
       .src-row { margin: 0.9rem 0 0; font-size: 0.8125rem; }
       .through .founder { margin-top: 1.25rem; }
       .kicker {
@@ -257,14 +261,32 @@
     </section>
 
     <main id="main">
+      <section id="about-fund" class="wrap" aria-labelledby="about-fund-title">
+        <h2 id="about-fund-title" class="sr-only">Who we are, what we do, and how patients are treated</h2>
+        <ul class="pillars">
+          <li>
+            <h3>Who we are</h3>
+            <p>The WICHE Cancer Fund is a named fund held by AUB, a US <span class="nowrap">501(c)(3)</span>. Its official designation is the WICHE Oncology Endowed Fund. In 2023, Randa Armoush, a breast cancer survivor, started the fund.</p>
+          </li>
+          <li>
+            <h3>What we do</h3>
+            <p>The fund pays for cancer treatment AUBMC patients can’t afford, so treatment doesn’t stop because of cost.</p>
+          </li>
+          <li>
+            <h3>How patients are treated</h3>
+            <!-- Treatment at NKBCI and hospital financial assessment: existing site wording. JCI March 2024: https://aubmc.org.lb/Documents/press/6th_JCI_En.pdf. Fourth Magnet, 2024: https://www.aubmc.org.lb/Documents/press/2024/August/AUBMC-MAGNET-Recognition-EN.pdf -->
+            <!-- [REQUIRES APPROVAL: AUBMC] Confirm it is accurate to say treatment paid by this fund takes place at the Naef K. Basile Cancer Institute. -->
+            <p>Treatment is at AUBMC’s Naef K. Basile Cancer Institute. AUBMC decides who is helped after its patient financial assessment. The hospital is JCI accredited (reaccredited in March 2024) and Magnet recognized (fourth recognition in 2024).</p>
+          </li>
+        </ul>
+      </section>
+
       <section id="aubmc" class="wrap" aria-labelledby="aubmc-title">
         <h2 id="aubmc-title">About AUBMC</h2>
         <!-- AUBMC is the teaching hospital of the Faculty of Medicine at AUB (established 1867); serving patients since 1902; more than 350 beds; NKBCI is the adult cancer institute; five accreditations JCI, Magnet, CAP, ACGME-I and JACIE. Source: https://aubmc.org.lb/aboutus/Pages/why.aspx -->
-        <p>AUBMC is the hospital of the American University of Beirut. It has cared for patients in Lebanon and the region since 1902, and is the teaching hospital for AUB’s Faculty of Medicine, established in 1867. It has more than 350 beds.</p>
-        <!-- NKBCI enrolls about 2,500 new cancer patients a year (average annual numbers). Source: https://sites.aub.edu.lb/aubmcacc/nkbci/nkbci-patient-care-services-2/ -->
-        <p>Adult cancer care is provided at the Naef K. Basile Cancer Institute, which enrolls about 2,500 new cancer patients a year.</p>
-        <!-- Five accreditations: https://aubmc.org.lb/aboutus/Pages/why.aspx and https://aubmc.org.lb/Documents/press/6th_JCI_En.pdf. JCI 6th reaccreditation, March 2024: same JCI PDF. Fourth Magnet recognition, 2024, first in MENA and second outside the US: https://www.aubmc.org.lb/Documents/press/2024/August/AUBMC-MAGNET-Recognition-EN.pdf -->
-        <p>The hospital holds five international accreditations: Joint Commission International (JCI), Magnet, the College of American Pathologists (CAP), ACGME-I, and JACIE. JCI reaccredited AUBMC in March 2024, its sixth such review. In 2024 AUBMC also received its fourth Magnet recognition: the first medical center in the MENA region, and the second outside the United States, to do so.</p>
+        <p>AUBMC is the hospital of the American University of Beirut. It has cared for patients in Lebanon and the region since 1902, and is the teaching hospital for AUB’s Faculty of Medicine, established in 1867. It has more than 350 beds. The Naef K. Basile Cancer Institute enrolls about 2,500 new cancer patients a year.</p>
+        <!-- Five accreditations: https://aubmc.org.lb/aboutus/Pages/why.aspx and https://aubmc.org.lb/Documents/press/6th_JCI_En.pdf -->
+        <p>It holds five international accreditations: JCI, Magnet, the College of American Pathologists (CAP), ACGME-I, and JACIE.</p>
         <p class="src-row">
           <a class="cite" href="https://aubmc.org.lb/aboutus/Pages/why.aspx" target="_blank" rel="noopener noreferrer">AUBMC<span class="sr-only">, opens in a new tab</span></a>
           · <a class="cite" href="https://aubmc.org.lb/Documents/press/6th_JCI_En.pdf" target="_blank" rel="noopener noreferrer">JCI, March 2024 (PDF)<span class="sr-only">, opens in a new tab</span></a>
