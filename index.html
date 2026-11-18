@@ -87,6 +87,7 @@
       .brand img { display: block; height: 92px; max-width: 100%; width: auto; }
       @media (min-width: 720px) { .brand img { height: 120px; } }
       .hero { padding-block: 2rem 1.25rem; }
+      .hero-visual { display: none; }
       .who { max-width: 40ch; margin: 0.65rem 0 0; font-size: 1.0625rem; line-height: 1.4; }
       .trust { background: var(--wash); border-block: 1px solid var(--line); padding-block: 0.8rem 0.9rem; }
       .trust ul {
@@ -222,6 +223,38 @@
       @media (min-width: 700px) {
         .stat-strip { grid-template-columns: repeat(2, 1fr); }
       }
+      @media (min-width: 900px) {
+        :root { --page: 72rem; }
+        .hero { padding-block: 2.75rem 1.75rem; }
+        .hero-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(280px, 28rem);
+          gap: 3rem;
+          align-items: center;
+        }
+        .hero-visual { display: block; }
+        .hero-visual img { display: block; width: 100%; height: auto; border-radius: 12px; }
+        .cta-line { max-width: 22ch; font-size: 1.25rem; }
+        .trust ul {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0.9rem 1.75rem;
+          font-size: 0.875rem;
+          line-height: 1.45;
+        }
+        .pillars { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .pillars p { max-width: none; }
+        .pair {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0 2.75rem;
+          align-items: start;
+        }
+        .stat-strip { grid-template-columns: repeat(4, 1fr); }
+        .together-grid { grid-template-columns: 16fr 9fr; }
+        .give-actions, .hero-actions { flex-wrap: nowrap; }
+        .founder p, .hope { max-width: none; }
+      }
+
       @media print {
         .skip, #share { display: none !important; }
         h1, h2, .step-title { break-after: avoid; }
@@ -235,16 +268,21 @@
     <a class="skip" href="#main">Skip to content</a>
 
     <header class="hero">
-      <div class="wrap">
-        <p class="brand"><img src="wiche-horizontal.svg" width="826" height="244" alt="WICHE Cancer Fund" /></p>
-        <h1>So treatment can continue.</h1>
-        <p class="cta-line">Treatment shouldn’t stop because of cost. You can keep it going.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-cta" href="https://giving.aub.edu.lb/WICHE" target="_blank" rel="noopener noreferrer">Give hope<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
-          <a class="btn btn-outline btn-cta-2" href="#share">Share</a>
-          <a class="btn btn-outline btn-cta-2" href="#how">See where it goes</a>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="brand"><img src="wiche-horizontal.svg" width="826" height="244" alt="WICHE Cancer Fund" /></p>
+          <h1>So treatment can continue.</h1>
+          <p class="cta-line">Treatment shouldn’t stop because of cost. You can keep it going.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-cta" href="https://giving.aub.edu.lb/WICHE" target="_blank" rel="noopener noreferrer">Give hope<span class="sr-only"> on AUB’s site. Opens in a new tab.</span></a>
+            <a class="btn btn-outline btn-cta-2" href="#share">Share</a>
+            <a class="btn btn-outline btn-cta-2" href="#how">See where it goes</a>
+          </div>
+          <p class="cta-note">Every gift counts.</p>
         </div>
-        <p class="cta-note">Every gift counts.</p>
+        <div class="hero-visual">
+          <img src="hope-bell.jpg" width="550" height="390" alt="The Hope Bell plaque and bell mounted on a wooden ribbon at AUBMC." />
+        </div>
       </div>
     </header>
 
@@ -281,7 +319,8 @@
         </ul>
       </section>
 
-      <section id="aubmc" class="wrap" aria-labelledby="aubmc-title">
+      <div class="pair wrap">
+      <section id="aubmc" aria-labelledby="aubmc-title">
         <h2 id="aubmc-title">About AUBMC</h2>
         <!-- AUBMC is the teaching hospital of the Faculty of Medicine at AUB (established 1867); serving patients since 1902; more than 350 beds; NKBCI is the adult cancer institute; five accreditations JCI, Magnet, CAP, ACGME-I and JACIE. Source: https://aubmc.org.lb/aboutus/Pages/why.aspx -->
         <p>AUBMC is the hospital of the American University of Beirut. It has cared for patients in Lebanon and the region since 1902, and is the teaching hospital for AUB’s Faculty of Medicine, established in 1867. It has more than 350 beds. The Naef K. Basile Cancer Institute enrolls about 2,500 new cancer patients a year.</p>
@@ -295,7 +334,7 @@
         </p>
       </section>
 
-      <section id="through" class="wrap through" aria-labelledby="through-title">
+      <section id="through" class="through" aria-labelledby="through-title">
         <h2 id="through-title">Why give through this link</h2>
         <p>Your gift goes straight to AUB’s official giving page for the WICHE Oncology Endowed Fund. This site does not take payments. Nothing passes through us.</p>
         <p>AUB, a US <span class="nowrap">501(c)(3)</span>, holds the fund. The hospital decides who is helped.</p>
@@ -305,6 +344,7 @@
           <figcaption>Randa Armoush, Founder</figcaption>
         </figure>
       </section>
+      </div>
 
       <section id="lebanon" class="wrap" aria-labelledby="lebanon-title">
         <!-- Official AUB giving-page total is 8 breast cancer patients. Do not add other diagnosis counts unless AUB supplies them. -->
