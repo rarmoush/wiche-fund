@@ -13,7 +13,7 @@
     li: "Breast cancer care at AUBMC, all year. The WICHE Cancer Fund helps patients get the cancer treatment they can't afford. Lebanon’s registry recorded 3,754 new breast cancer cases in women in 2024, up from 2,252 in 2012. GLOBOCAN 2024: 978 breast cancer deaths, and 38.7% of new cancers in women. Gifts go to AUB's US 501(c)(3). "
   };
 
-  var ASK_FRIENDS = "I'm asking friends to give to the WICHE Cancer Fund at AUBMC. We help patients get the cancer treatment they can't afford. Gifts go to AUB's US 501(c)(3). ";
+  var ASK_FRIENDS = "I'm asking friends to give to the WICHE Cancer Fund at AUBMC. We help patients get the cancer treatment they can't afford. ";
 
   document.body.classList.toggle("breast-focus", BREAST_FOCUS);
 
